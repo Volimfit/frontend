@@ -1,35 +1,27 @@
-# Stage 1: Build the Next.js application
-FROM node:18-alpine AS builder
+#Dockerfile
+
+FROM node:alpine
 
 # Set working directory
-WORKDIR /app
+WORKDIR /usr/app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy package.json and package-lock.json before other files
+COPY ./package*.json ./
 
-# Install dependencies
+# Install dependencies and pm2
 RUN npm install
+RUN npm install --global pm2
 
-# Copy the rest of the application code
-COPY . .
+# Copy all files
+COPY ./ ./
 
-# Build the application
+# Build app
 RUN npm run build
 
-# Stage 2: Serve the application using Nginx
-FROM nginx:1.21.1-alpine
-
-# Copy Nginx configuration file
-COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
-
-# Remove default Nginx static files
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copy built application from the builder stage
-COPY --from=builder /app/.next /usr/share/nginx/html
-
-# Expose port 3000
+# Expose the listening port
 EXPOSE 3000
 
-# Start Nginx server
-CMD ["nginx", "-g", "daemon off;"]
+# Run container as non-root user
+USER node
+
+CMD [ "pm2-runtime", "npm", "--", "start" ]
