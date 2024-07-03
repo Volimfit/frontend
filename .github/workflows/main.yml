@@ -27,4 +27,4 @@ jobs:
       - name: Docker Compose
         run: |
           echo "Compose Started..."
-          docker-compose up -d
+          docker compose up -d
