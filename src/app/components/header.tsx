@@ -16,7 +16,20 @@ import React from 'react';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ['О клубе', 'Секции', 'Контакты'];
+  const menuItems = [
+    {
+      title: 'О клубе',
+      href: '#about',
+    },
+    {
+      title: 'Секции',
+      href: '#section',
+    },
+    {
+      title: 'Контакты',
+      href: '#contact',
+    },
+  ];
 
   return (
     <Navbar height={'5rem'} isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
@@ -37,17 +50,17 @@ export default function Header() {
           <Image radius='none' src={'logo_text.png'} alt='ff' width={150} />
         </NavbarBrand>
         <NavbarItem>
-          <Link color='foreground' href='#'>
+          <Link color='foreground' href='#about'>
             О клубе
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href='#' color='foreground'>
+          <Link href='#section' color='foreground'>
             Секции
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href='#' color='foreground'>
+          <Link href='#contact' color='foreground'>
             Контакты
           </Link>
         </NavbarItem>
@@ -58,7 +71,7 @@ export default function Header() {
           <Link href='#'>Login</Link>
         </NavbarItem> */}
         <NavbarItem>
-          <Button as={Link} color='success' href='#'>
+          <Button as={Link} color='success' href='#form'>
             Оставить заявку
           </Button>
         </NavbarItem>
@@ -67,8 +80,8 @@ export default function Header() {
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className='w-full' color={'foreground'} href='#' size='lg'>
-              {item}
+            <Link className='w-full' color={'foreground'} href={item.href} size='lg'>
+              {item.title}
             </Link>
           </NavbarMenuItem>
         ))}
