@@ -52,19 +52,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   return (
     <>
-      <div className='embla relative w-full h-screen'>
+      <div className='embla   '>
         <div className='embla__viewport' ref={emblaRef}>
           <div className='embla__container'>
             {slides.map((index) => (
               <div className='embla__slide ' key={index}>
                 <img
-                  src={'fit.jpg'}
+                  src={'monya.svg'}
                   alt='...'
-                  className='absolute w-full h-full object-cover blur-sm -z-40'
+                  className='absolute max-w-[1300px]  bottom-0 right-0  -z-40 fill-success'
                 />
-                <div className=' inset-0 flex items-center justify-center bg-black bg-opacity-50'>
+                <div className=' inset-0 flex items-start justify-start bg-black bg-opacity-50'>
                   <div className='text-center text-white p-4 bg-black bg-opacity-70 rounded-lg'>
-                    <h2 className='text-2xl md:text-4xl font-bold mb-4'>
+                    <h2 className='text-2xl md:text-4xl font-bold mb-4 bg-success'>
                       Старт продаж с {index + 1} июля
                     </h2>
                     <p className='text-lg md:text-2xl mb-2'>

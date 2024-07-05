@@ -2,6 +2,7 @@
 import { Divider } from '@nextui-org/divider';
 import AboutCompany from './components/about';
 import Activity from './components/activity';
+import CardList from './components/cards';
 import EmblaCarousel from './components/emblaCarousel';
 import Footer from './components/footer';
 import Header from './components/header';
@@ -34,7 +35,7 @@ export default function Home() {
 
           <Activity />
 
-          {/* <CarouselComponent /> */}
+          <CardList />
 
           <ThemeSwitcher />
         </main>

@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+      },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       //   'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
@@ -21,12 +24,14 @@ const config: Config = {
       themes: {
         light: {
           // ...
-          colors: {},
+          colors: {
+            success: '#3bc9db',
+          },
         },
         dark: {
           // ...
           colors: {
-            success: '#129eab',
+            success: '#3bc9db',
           },
         },
         // ... custom themes
