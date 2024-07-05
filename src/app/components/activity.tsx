@@ -5,115 +5,115 @@ export default function Activity() {
     {
       title: 'Intensive training',
       description: 'Интенсивные тренировки для повышения выносливости и силы.',
-      img: 'intensive.jpg',
+      img: 'intensive.png',
     },
     {
       title: 'TABATA',
       description: 'Высокоинтенсивные интервальные тренировки.',
-      img: 'tabata.jpg',
+      img: 'tabata.png',
     },
     {
       title: 'Strong body',
       description: 'Силовые тренировки для укрепления мышц.',
-      img: 'strong-bod.jpg',
+      img: 'strong-bod.png',
     },
-    {
-      title: 'Cardio + Stretching',
-      description: 'Кардио тренировки с элементами растяжки.',
-      img: 'cardio-stretching.png',
-    },
+    // {
+    //   title: 'Cardio + Stretching',
+    //   description: 'Кардио тренировки с элементами растяжки.',
+    //   img: 'cardio-stretching.png',
+    // },
     {
       title: 'Бокс',
       description: 'Тренировки по боксу для всех уровней.',
-      img: 'boxing.jpg',
+      img: 'boxing.png',
     },
     {
       title: 'Pilates',
       description: 'Укрепление мышц и улучшение гибкости.',
-      img: 'pilates.jpg',
+      img: 'pilates.png',
     },
     {
       title: 'Yoga',
       description: 'Практика йоги для всех уровней.',
-      img: 'yoga.jpg',
+      img: 'yoga.png',
     },
     {
       title: 'Джиу Джитсу',
       description: 'Боевые искусства и самооборона.',
-      img: 'jiu-jitsu.jpg',
+      img: 'jiu-jitsu.png',
     },
-    {
-      title: 'Full body',
-      description: 'Тренировки на все группы мышц.',
-      img: 'full-body.jpg',
-    },
-    {
-      title: 'Functional training',
-      description: 'Функциональные тренировки для всего тела.',
-      img: 'functional-training.jpg',
-    },
-    {
-      title: 'Body fight',
-      description: 'Тренировки с элементами боевых искусств.',
-      img: 'body-fight.jpg',
-    },
-    {
-      title: 'Interval training',
-      description: 'Интервальные тренировки для сжигания жира.',
-      img: 'interval-training.jpg',
-    },
+    // {
+    //   title: 'Full body',
+    //   description: 'Тренировки на все группы мышц.',
+    //   img: 'full-body.png',
+    // },
+    // {
+    //   title: 'Functional training',
+    //   description: 'Функциональные тренировки для всего тела.',
+    //   img: 'functional-training.png',
+    // },
+    // {
+    //   title: 'Body fight',
+    //   description: 'Тренировки с элементами боевых искусств.',
+    //   img: 'body-fight.png',
+    // },
+    // {
+    //   title: 'Interval training',
+    //   description: 'Интервальные тренировки для сжигания жира.',
+    //   img: 'interval-training.png',
+    // },
     {
       title: 'Stretching',
       description: 'Тренировки на растяжку для всех уровней.',
-      img: 'stretching.jpg',
+      img: 'stretching.png',
     },
     {
       title: 'PUMP',
       description: 'Силовые тренировки с использованием штанг и гантелей.',
-      img: 'pump.jpg',
+      img: 'pump.png',
     },
-    {
-      title: 'Здоровая спина',
-      description: 'Тренировки для укрепления мышц спины и улучшения осанки.',
-      img: 'healthy-back.jpg',
-    },
+    // {
+    //   title: 'Здоровая спина',
+    //   description: 'Тренировки для укрепления мышц спины и улучшения осанки.',
+    //   img: 'healthy-back.png',
+    // },
   ];
 
   const kidsActivities = [
     {
       title: 'Детское ОФП',
       description: 'Общая физическая подготовка для детей.',
-      img: 'kids-fitness.jpg',
+      img: 'kids-fitness.png',
     },
     {
       title: 'Джиу Джитсу',
       description: 'Боевые искусства и самооборона для детей.',
-      img: 'kids-jiu-jitsu.jpg',
+      img: 'kids-jiu-jitsu.png',
     },
     {
       title: 'Художественная гимнастика',
       description: 'Тренировки по художественной гимнастике.',
-      img: 'kids-gymnastics.jpg',
+      img: 'kids-gymnastics.png',
     },
     {
       title: 'Бокс',
       description: 'Тренировки по боксу для детей.',
       img: 'kids-boxing.png',
     },
-    {
-      title: 'Степ-аэробика',
-      description: 'Веселые и динамичные тренировки для детей.',
-      img: 'aerobics.png',
-    },
-    {
-      title: 'Танцы',
-      description: 'Танцевальные занятия для детей.',
-      img: 'kids-dance.jpeg',
-    },
+    // {
+    //   title: 'Степ-аэробика',
+    //   description: 'Веселые и динамичные тренировки для детей.',
+    //   img: 'aerobics.png',
+    // },
+    // {
+    //   title: 'Танцы',
+    //   description: 'Танцевальные занятия для детей.',
+    //   img: 'kids-dance.jpeg',
+    // },
     {
       title: 'Тэг-регби',
       description: 'Безопасная версия регби для детей.',
-      img: 'kids-tag-rugby.jpg',
+      img: 'kids-tag-rugby.png',
     },
   ];
 
@@ -135,7 +135,7 @@ export default function Activity() {
                       radius='lg'
                       width='100%'
                       alt={activity.title}
-                      className='w-full object-cover h-[140px]'
+                      className='w-full object-contain h-[140px]'
                       src={activity.img}
                     />
                   </CardBody>
@@ -165,7 +165,7 @@ export default function Activity() {
                       radius='lg'
                       width='100%'
                       alt={activity.title}
-                      className='w-full object-cover h-[140px]'
+                      className='w-full object-contain h-[140px]'
                       src={activity.img}
                     />
                   </CardBody>
