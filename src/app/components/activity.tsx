@@ -1,0 +1,186 @@
+import { Card, CardBody, CardFooter, Image, Tab, Tabs } from '@nextui-org/react';
+
+export default function Activity() {
+  const adultActivities = [
+    {
+      title: 'Intensive training',
+      description: 'Интенсивные тренировки для повышения выносливости и силы.',
+      img: 'intensive.jpg',
+    },
+    {
+      title: 'TABATA',
+      description: 'Высокоинтенсивные интервальные тренировки.',
+      img: 'tabata.jpg',
+    },
+    {
+      title: 'Strong body',
+      description: 'Силовые тренировки для укрепления мышц.',
+      img: 'strong-bod.jpg',
+    },
+    {
+      title: 'Cardio + Stretching',
+      description: 'Кардио тренировки с элементами растяжки.',
+      img: 'cardio-stretching.png',
+    },
+    {
+      title: 'Бокс',
+      description: 'Тренировки по боксу для всех уровней.',
+      img: 'boxing.jpg',
+    },
+    {
+      title: 'Pilates',
+      description: 'Укрепление мышц и улучшение гибкости.',
+      img: 'pilates.jpg',
+    },
+    {
+      title: 'Yoga',
+      description: 'Практика йоги для всех уровней.',
+      img: 'yoga.jpg',
+    },
+    {
+      title: 'Джиу Джитсу',
+      description: 'Боевые искусства и самооборона.',
+      img: 'jiu-jitsu.jpg',
+    },
+    {
+      title: 'Full body',
+      description: 'Тренировки на все группы мышц.',
+      img: 'full-body.jpg',
+    },
+    {
+      title: 'Functional training',
+      description: 'Функциональные тренировки для всего тела.',
+      img: 'functional-training.jpg',
+    },
+    {
+      title: 'Body fight',
+      description: 'Тренировки с элементами боевых искусств.',
+      img: 'body-fight.jpg',
+    },
+    {
+      title: 'Interval training',
+      description: 'Интервальные тренировки для сжигания жира.',
+      img: 'interval-training.jpg',
+    },
+    {
+      title: 'Stretching',
+      description: 'Тренировки на растяжку для всех уровней.',
+      img: 'stretching.jpg',
+    },
+    {
+      title: 'PUMP',
+      description: 'Силовые тренировки с использованием штанг и гантелей.',
+      img: 'pump.jpg',
+    },
+    {
+      title: 'Здоровая спина',
+      description: 'Тренировки для укрепления мышц спины и улучшения осанки.',
+      img: 'healthy-back.jpg',
+    },
+  ];
+
+  const kidsActivities = [
+    {
+      title: 'Детское ОФП',
+      description: 'Общая физическая подготовка для детей.',
+      img: 'kids-fitness.jpg',
+    },
+    {
+      title: 'Джиу Джитсу',
+      description: 'Боевые искусства и самооборона для детей.',
+      img: 'kids-jiu-jitsu.jpg',
+    },
+    {
+      title: 'Художественная гимнастика',
+      description: 'Тренировки по художественной гимнастике.',
+      img: 'kids-gymnastics.jpg',
+    },
+    {
+      title: 'Бокс',
+      description: 'Тренировки по боксу для детей.',
+      img: 'kids-boxing.png',
+    },
+    {
+      title: 'Степ-аэробика',
+      description: 'Веселые и динамичные тренировки для детей.',
+      img: 'aerobics.png',
+    },
+    {
+      title: 'Танцы',
+      description: 'Танцевальные занятия для детей.',
+      img: 'kids-dance.jpeg',
+    },
+    {
+      title: 'Тэг-регби',
+      description: 'Безопасная версия регби для детей.',
+      img: 'kids-tag-rugby.jpg',
+    },
+  ];
+
+  return (
+    <div className='flex w-full flex-col p-4  '>
+      <Tabs aria-label='Options'>
+        <Tab key='photos' title='Групповые занятия для взрослых'>
+          <div className=' flex items-center justify-center'>
+            <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl'>
+              {adultActivities.map((activity, index) => (
+                <Card
+                  shadow='sm'
+                  key={index}
+                  isPressable
+                  onPress={() => console.log(activity.title)}>
+                  <CardBody className='overflow-visible p-0'>
+                    <Image
+                      shadow='sm'
+                      radius='lg'
+                      width='100%'
+                      alt={activity.title}
+                      className='w-full object-cover h-[140px]'
+                      src={activity.img}
+                    />
+                  </CardBody>
+                  <CardFooter className='div-small justify-between'>
+                    <div>
+                      <div>{activity.title}</div>
+                      <div>{activity.description}</div>
+                    </div>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </Tab>
+        <Tab key='music' title='Занятия для детей'>
+          <div className=' flex items-center justify-center'>
+            <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl '>
+              {kidsActivities.map((activity, index) => (
+                <Card
+                  shadow='sm'
+                  key={index}
+                  isPressable
+                  onPress={() => console.log(activity.title)}>
+                  <CardBody className='overflow-visible p-0'>
+                    <Image
+                      shadow='sm'
+                      radius='lg'
+                      width='100%'
+                      alt={activity.title}
+                      className='w-full object-cover h-[140px]'
+                      src={activity.img}
+                    />
+                  </CardBody>
+                  <CardFooter className='div-small justify-between'>
+                    <div>
+                      <div>{activity.title}</div>
+                      <div>{activity.description}</div>
+                    </div>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </Tab>
+      </Tabs>
+    </div>
+  );
+}

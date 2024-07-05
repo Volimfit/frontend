@@ -12,9 +12,9 @@ export default function Footer() {
               <span className='me-3 [&>svg]:h-4 [&>svg]:w-4'>
                 <Image radius='none' src={'logo.png'} alt='ff' width={40} />
               </span>
-              Volimfit
+              VOLIMFIT
             </h6>
-            <p>Фитнес у твоего дома.</p>
+            <p>Фитнес-клуб, где каждая деталь продумана до мелочей!</p>
           </div>
 
           <div>
