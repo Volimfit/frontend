@@ -10,7 +10,7 @@ export default function Footer() {
           <div className=''>
             <h6 className='mb-4 flex items-center justify-center font-semibold uppercase md:justify-start'>
               <span className='me-3 [&>svg]:h-4 [&>svg]:w-4'>
-                <Image radius='none' src={'logo.png'} alt='ff' width={40} />
+                <Image radius='none' src={'logo_only.png'} alt='ff' width={100} />
               </span>
               VOLIMFIT
             </h6>
@@ -19,44 +19,54 @@ export default function Footer() {
 
           <div>
             <h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
-              О компании
+              Карта сайта
             </h6>
             <p className='mb-4'>
-              <a href='#!'>Компания</a>
+              <a href='#about'>О клубе</a>
             </p>
             <p className='mb-4'>
-              <a href='#!'>Контакты</a>
+              <a href='#section'>Секции</a>
+            </p>
+            <p className='mb-4'>
+              <a href='#contact'>Контакты</a>
             </p>
           </div>
 
           <div>
             <h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
-              Клиентам
+              Социальные сети
             </h6>
-            <p className='mb-4'>
-              <a href='#!'>Расписание </a>
-            </p>
-            <p className='mb-4'>
-              <a href='#!'>Тренеры</a>
-            </p>
-            <p className='mb-4'>
-              <a href='#!'>Фитнес-услуги</a>
-            </p>
+            <div className='mb-4 flex items-center justify-center sm:justify-start'>
+              <a href='https://t.me/VOLIMFIT' target='_blank'>
+                <Image src={'social/telegram.png'} alt='ff' width={50} radius='none' />{' '}
+              </a>
+              <a href='https://t.me/VOLIMFIT' target='_blank' className='ml-2'>
+                Telegram
+              </a>
+            </div>
+            <div className='mb-4 flex items-center justify-center sm:justify-start'>
+              <a href='https://taplink.cc/volimfit' target='_blank'>
+                <Image src={'social/taplink.png'} alt='ff' width={50} radius='none' />
+              </a>
+              <a href='https://taplink.cc/volimfit' target='_blank' className='ml-2'>
+                Taplink
+              </a>
+            </div>
+            <div className='mb-4 flex items-center justify-center sm:justify-start'>
+              <a href='https://wa.me/89197742220' target='_blank'>
+                <Image src={'social/whatsapp.png'} alt='ff' width={50} radius='none' />
+              </a>
+              <a href='https://wa.me/89197742220' target='_blank' className='ml-2'>
+                Whatsapp
+              </a>
+            </div>
           </div>
 
           <div>
             <h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
               Контакты
             </h6>
-            <p className='mb-4 flex items-center justify-center md:justify-start'>
-              <span className='me-3 [&>svg]:h-5 [&>svg]:w-5'>
-                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
-                  <path d='M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z' />
-                  <path d='M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z' />
-                </svg>
-              </span>
-              Москва🔴
-            </p>
+
             <p className='mb-4 flex items-center justify-center md:justify-start'>
               <span className='me-3 [&>svg]:h-5 [&>svg]:w-5'>
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
@@ -78,7 +88,7 @@ export default function Footer() {
               </span>
               +7 (926) 074-22-20
             </p>
-            <p className='flex items-center justify-center md:justify-start'>
+            <p className='flex items-center justify-center md:justify-start mb-3'>
               <span className='me-3 [&>svg]:h-5 [&>svg]:w-5'>
                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
                   <path
@@ -89,6 +99,16 @@ export default function Footer() {
                 </svg>
               </span>
               +7 (919) 774-22-20
+            </p>
+
+            <p className=' flex items-center justify-center md:justify-start'>
+              <span className='me-3 [&>svg]:h-5 [&>svg]:w-5'>
+                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'>
+                  <path d='M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z' />
+                  <path d='M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z' />
+                </svg>
+              </span>
+              Москва, Каширский проезд, д.25, корп 4, пом 13Н
             </p>
           </div>
         </div>

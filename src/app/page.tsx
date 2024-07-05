@@ -17,13 +17,13 @@ export default function Home() {
         </header>
         <main className='mb-auto '>
           <EmblaCarousel slides={Array.from(Array(5).keys())} options={{ loop: true }} />
-          <div className=' m-4'>
+          <div className=' m-4' id='about'>
             <h4 className='text-large font-medium'>О нас</h4>
             <Divider />
             <p className='text-small text-default-400'>тут не придумал текст</p>
           </div>
           <AboutCompany />
-          <div className=' m-4'>
+          <div className=' m-4' id='section'>
             <h4 className='text-large font-medium'>Секции</h4>
             <Divider />
             <p className='text-small text-default-400'>

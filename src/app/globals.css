@@ -107,3 +107,22 @@ body {
   padding: 0 2.4rem;
   min-width: 8.4rem;
 }
+.animated-logo {
+  animation: animate 3s infinite;
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes animate {
+  0% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.7;
+  }
+}
