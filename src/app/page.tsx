@@ -6,7 +6,7 @@ import CardList from './components/cards';
 import EmblaCarousel from './components/emblaCarousel';
 import Footer from './components/footer';
 import Header from './components/header';
-import { ThemeSwitcher } from './components/ThemeSwitcher';
+import Maps from './components/maps';
 export default function Home() {
   return (
     <main>
@@ -36,8 +36,8 @@ export default function Home() {
           <Activity />
 
           <CardList />
-
-          <ThemeSwitcher />
+          <Maps />
+          {/* <ThemeSwitcher /> */}
         </main>
         <footer>
           <Footer />

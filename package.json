@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.4.2",
+    "@pbe/react-yandex-maps": "^1.2.5",
     "embla-carousel": "^8.1.6",
     "embla-carousel-autoplay": "^8.1.6",
     "embla-carousel-react": "^8.1.6",
