@@ -6,13 +6,15 @@ import CardList from './components/cards';
 import EmblaCarousel from './components/emblaCarousel';
 import Footer from './components/footer';
 import Header from './components/header';
+import HeaderAdd from './components/headerAdd';
 import Maps from './components/maps';
+import { ThemeSwitcher } from './components/ThemeSwitcher';
 export default function Home() {
   return (
     <main>
       <div className='flex flex-col h-screen justify-between'>
         <header>
-          {' '}
+          <HeaderAdd />
           <Header />
         </header>
         <main className='mb-auto '>
@@ -37,7 +39,7 @@ export default function Home() {
 
           <CardList />
           <Maps />
-          {/* <ThemeSwitcher /> */}
+          <ThemeSwitcher />
         </main>
         <footer>
           <Footer />
