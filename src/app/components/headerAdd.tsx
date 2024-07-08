@@ -23,11 +23,11 @@ export default function HeaderAdd() {
             width='32'
             height='32'
             viewBox='0 0 24 24'
-            stroke-width='1'
+            strokeWidth='1'
             stroke='#ffffff'
             fill='none'
-            stroke-linecap='round'
-            stroke-linejoin='round'>
+            strokeLinecap='round'
+            strokeLinejoin='round'>
             <path d='M15 10l-4 4 6 6 4-16-18 7 4 2 2 6 3-4'></path>
           </svg>
         </a>

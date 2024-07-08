@@ -71,7 +71,7 @@ export default function Header() {
           <Link href='#'>Login</Link>
         </NavbarItem> */}
         <NavbarItem>
-          <Button as={Link} color='success' href='#form'>
+          <Button as={Link} variant='ghost' color='success' href='#form'>
             Оставить заявку
           </Button>
         </NavbarItem>

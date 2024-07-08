@@ -7,6 +7,11 @@
 body {
   font-family: 'Montserrat' !important;
 }
+@media (max-width: 768px) {
+  .bg-mobile {
+    background-position: right 20% !important;
+  }
+}
 .embla {
   /* max-width: 48rem; */
   margin: auto;
