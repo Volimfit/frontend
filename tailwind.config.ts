@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+        Montserrat: ['Montserrat'],
       },
       // backgroundImage: {
       //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -24,6 +24,7 @@ const config: Config = {
       themes: {
         light: {
           // ...
+
           colors: {
             success: '#3bc9db',
           },
