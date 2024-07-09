@@ -118,7 +118,7 @@ export default function Activity() {
   ];
 
   return (
-    <div className='flex w-full flex-col p-4  '>
+    <div className='container mx-auto  flex w-full flex-col p-4  max-w-7xl '>
       <Tabs aria-label='Options'>
         <Tab key='photos' title='Групповые занятия для взрослых'>
           <div className=' flex items-center justify-center'>

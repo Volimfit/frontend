@@ -5,7 +5,7 @@ import { Image } from '@nextui-org/react';
 
 export default function AboutCompany() {
   return (
-    <div className='container mx-auto p-4'>
+    <div className='container mx-auto p-4 max-w-7xl'>
       <div className='flex flex-col md:flex-row items-stretch gap-4'>
         <div className='md:w-1/2 w-full'>
           <div>
