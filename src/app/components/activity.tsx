@@ -4,17 +4,17 @@ export default function Activity() {
   const adultActivities = [
     {
       title: 'Intensive training',
-      description: 'Интенсивные тренировки для повышения выносливости и силы.',
+      description: 'Интенсивные тренировки для повышения выносливости и силы',
       img: 'intensive.png',
     },
     {
       title: 'TABATA',
-      description: 'Высокоинтенсивные интервальные тренировки.',
+      description: 'Высокоинтенсивные интервальные тренировки',
       img: 'tabata.png',
     },
     {
       title: 'Strong body',
-      description: 'Силовые тренировки для укрепления мышц.',
+      description: 'Силовые тренировки для укрепления мышц',
       img: 'strong-bod.png',
     },
     // {
@@ -24,22 +24,22 @@ export default function Activity() {
     // },
     {
       title: 'Бокс',
-      description: 'Тренировки по боксу для всех уровней.',
+      description: 'Тренировки по боксу для всех уровней',
       img: 'boxing.png',
     },
     {
       title: 'Pilates',
-      description: 'Укрепление мышц и улучшение гибкости.',
+      description: 'Укрепление мышц и улучшение гибкости',
       img: 'pilates.png',
     },
     {
       title: 'Yoga',
-      description: 'Практика йоги для всех уровней.',
+      description: 'Практика йоги для всех уровней',
       img: 'yoga.png',
     },
     {
       title: 'Джиу Джитсу',
-      description: 'Боевые искусства и самооборона.',
+      description: 'Боевые искусства и самооборона',
       img: 'jiu-jitsu.png',
     },
     // {
@@ -64,12 +64,12 @@ export default function Activity() {
     // },
     {
       title: 'Stretching',
-      description: 'Тренировки на растяжку для всех уровней.',
+      description: 'Тренировки на растяжку для всех уровней',
       img: 'stretching.png',
     },
     {
       title: 'PUMP',
-      description: 'Силовые тренировки с использованием штанг и гантелей.',
+      description: 'Силовые тренировки с использованием штанг и гантелей',
       img: 'pump.png',
     },
     // {
@@ -82,22 +82,22 @@ export default function Activity() {
   const kidsActivities = [
     {
       title: 'Детское ОФП',
-      description: 'Общая физическая подготовка для детей.',
+      description: 'Общая физическая подготовка для детей',
       img: 'kids-fitness.png',
     },
     {
       title: 'Джиу Джитсу',
-      description: 'Боевые искусства и самооборона для детей.',
+      description: 'Боевые искусства и самооборона для детей',
       img: 'kids-jiu-jitsu.png',
     },
     {
       title: 'Художественная гимнастика',
-      description: 'Тренировки по художественной гимнастике.',
+      description: 'Тренировки по художественной гимнастике',
       img: 'kids-gymnastics.png',
     },
     {
       title: 'Бокс',
-      description: 'Тренировки по боксу для детей.',
+      description: 'Тренировки по боксу для детей',
       img: 'kids-boxing.png',
     },
     // {
@@ -112,7 +112,7 @@ export default function Activity() {
     // },
     {
       title: 'Тэг-регби',
-      description: 'Безопасная версия регби для детей.',
+      description: 'Безопасная версия регби для детей',
       img: 'kids-tag-rugby.png',
     },
   ];
@@ -120,7 +120,7 @@ export default function Activity() {
   return (
     <div className='container mx-auto  flex w-full flex-col p-4  max-w-7xl '>
       <Tabs aria-label='Options'>
-        <Tab key='photos' title='Групповые занятия для взрослых'>
+        <Tab key='photos' title='Групповые занятия '>
           <div className=' flex items-center justify-center'>
             <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl'>
               {adultActivities.map((activity, index) => (

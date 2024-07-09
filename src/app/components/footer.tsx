@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h6 className='mt-4 flex justify-center font-semibold uppercase md:justify-start'>
+            <h6 className='flex justify-center font-semibold uppercase md:justify-start'>
               Социальные сети
             </h6>
             <div className='mb-4 flex items-center justify-center sm:justify-start'>
@@ -55,10 +55,10 @@ export default function Footer() {
               </a>
             </div>
             <div className='mb-4 flex items-center justify-center sm:justify-start'>
-              <a href='https://wa.me/89197742220' target='_blank'>
+              <a href='https://wa.me/+79197742220' target='_blank'>
                 <Image src={'social/whatsapp.png'} alt='ff' width={50} radius='none' />
               </a>
-              <a href='https://wa.me/89197742220' target='_blank' className='ml-2'>
+              <a href='https://wa.me/+79197742220' target='_blank' className='ml-2'>
                 Whatsapp
               </a>
             </div>

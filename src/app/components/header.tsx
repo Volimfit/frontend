@@ -38,15 +38,27 @@ export default function Header() {
       </NavbarContent>
 
       <NavbarContent className='sm:hidden pr-3' justify='center'>
-        <NavbarBrand className='animated-logo'>
-          <Image src={'logo_only.png'} alt='ff' width={100} radius='none' />
+        <NavbarBrand>
+          <Image
+            className='animated-logo'
+            src={'logo_only.png'}
+            alt='ff'
+            width={100}
+            radius='none'
+          />
           <Image radius='none' src={'logo_text.png'} alt='ff' width={150} />
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
-        <NavbarBrand className='p-4 animated-logo'>
-          <Image className='' radius='none' src={'logo_only.png'} alt='ff' width={100} />
+        <NavbarBrand className='p-4 '>
+          <Image
+            className=' animated-logo'
+            radius='none'
+            src={'logo_only.png'}
+            alt='ff'
+            width={100}
+          />
           <Image radius='none' src={'logo_text.png'} alt='ff' width={150} />
         </NavbarBrand>
         <NavbarItem>

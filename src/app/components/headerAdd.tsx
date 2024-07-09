@@ -31,7 +31,7 @@ export default function HeaderAdd() {
             <path d='M15 10l-4 4 6 6 4-16-18 7 4 2 2 6 3-4'></path>
           </svg>
         </a>
-        <a href='https://wa.me/89197742220' target='_blank' className='ml-2'>
+        <a href='https://wa.me/+79197742220' target='_blank' className='ml-2'>
           <svg
             data-mode='fill'
             xmlns='http://www.w3.org/2000/svg'

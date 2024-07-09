@@ -47,7 +47,10 @@ export default function MyForm() {
   if (finish) {
     return (
       <div className='animate-fadeIn container mx-auto max-w-7xl flex justify-center items-center'>
-        <div className='text-center'>спасибо за заявку, наш оператор скоро с вами свяжется</div>
+        <div className='text-center'>
+          Спасибо за заявку!
+          <br /> Менеджер скоро с вами свяжется
+        </div>
       </div>
     );
   }
@@ -58,7 +61,7 @@ export default function MyForm() {
       <Input
         {...register('phone', { pattern: /^\+7\d{10}$/ })}
         type='tel'
-        label='Phone'
+        label='Номер'
         value={first}
         onChange={handlePhoneChange}
         variant='bordered'

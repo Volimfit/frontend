@@ -102,7 +102,9 @@ export default function Home() {
             <div className=' m-4' id='about'>
               <h4 className='text-large font-medium'>О нас</h4>
               <Divider />
-              <p className='text-small text-default-400'>тут не придумал текст</p>
+              <p className='text-small text-default-400'>
+                Фитнес-клуб, где каждая деталь продумана до мелочей!
+              </p>
             </div>
             <AboutCompany />
           </FadeInSection>
