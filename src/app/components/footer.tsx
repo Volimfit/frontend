@@ -21,16 +21,14 @@ export default function Footer() {
 
           <div>
             <h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
-              Карта сайта
+              Время работы
             </h6>
+
             <p className='mb-4'>
-              <a href='#about'>О клубе</a>
+              <a href='#about'>пн-пт с 7:00 до 23:00</a>
             </p>
             <p className='mb-4'>
-              <a href='#section'>Секции</a>
-            </p>
-            <p className='mb-4'>
-              <a href='#contact'>Контакты</a>
+              <a href='#section'>сб- вскр 9:00 до 22:00</a>
             </p>
           </div>
 
