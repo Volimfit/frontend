@@ -129,7 +129,11 @@ export default function Home() {
           </FadeInSection>
 
           <FadeInSection>
-            <div className='min-h-96    '>
+            <div
+              className='min-h-96   inset-0 w-full h-full bg-cover bg-no-repeat bg-[right_bottom_-10rem]   bg-contain bg-opacity-50   '
+              style={{
+                backgroundImage: `url(weights.png)`,
+              }}>
               <div className=' m-4 z-10' id='form'>
                 <h4 className='text-large font-medium'>Присоединяйтесь к нам</h4>
                 <Divider />
