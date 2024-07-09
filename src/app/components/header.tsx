@@ -79,8 +79,15 @@ export default function Header() {
 
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link className='w-full' color={'foreground'} href={item.href} size='lg'>
+          <NavbarMenuItem className='mt-10' key={`${item}-${index}`}>
+            <Link
+              className='w-full'
+              color={'foreground'}
+              onClick={() => {
+                setIsMenuOpen(false);
+              }}
+              href={item.href}
+              size='lg'>
               {item.title}
             </Link>
           </NavbarMenuItem>

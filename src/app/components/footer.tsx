@@ -7,7 +7,7 @@ export default function Footer() {
     <footer
       className='bg-zinc-50 text-center text-surface/75 dark:bg-neutral-700 dark:text-white/75 lg:text-left'
       id='contact'>
-      <div className='mx-6 py-10 text-center md:text-left'>
+      <div className='mx-6 py-5 text-center md:text-left'>
         <div className='grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4'>
           <div className=''>
             <h6 className='mb-4 flex items-center justify-center font-semibold uppercase md:justify-start'>
@@ -16,7 +16,7 @@ export default function Footer() {
               </span>
               VOLIMFIT
             </h6>
-            <p>Фитнес-клуб, где каждая деталь продумана до мелочей!</p>
+            <span>Фитнес-клуб, где каждая деталь продумана до мелочей!</span>
           </div>
 
           <div>
@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
+            <h6 className='mt-4 flex justify-center font-semibold uppercase md:justify-start'>
               Социальные сети
             </h6>
             <div className='mb-4 flex items-center justify-center sm:justify-start'>
@@ -114,6 +114,9 @@ export default function Footer() {
             </p>
           </div>
         </div>
+      </div>
+      <div className=' text-center'>
+        <span>ИП Виданович Момчило ИНН 505013961540</span>
       </div>
     </footer>
   );
