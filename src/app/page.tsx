@@ -1,6 +1,6 @@
 'use client';
 import { Divider } from '@nextui-org/divider';
-import { Button } from '@nextui-org/react';
+import { Button, Image } from '@nextui-org/react';
 import Link from 'next/link';
 import AboutCompany from './components/about';
 import Activity from './components/activity';
@@ -26,34 +26,40 @@ export default function Home() {
                 {
                   id: 1,
                   data: (
-                    <div className='relative w-full h-screen'>
+                    <div className='relative w-full h-screen flex items-center justify-center'>
                       <div
-                        className='absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-right-bottom md:bg-right-bottom '
+                        className='absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-right-bottom md:bg-right-bottom'
                         style={{ backgroundImage: `url(monya_app.png)` }}></div>
                       <div className='absolute inset-0 w-full h-full bg-black bg-opacity-50 md:bg-opacity-50 bg-opacity-70'></div>
-                      <div className='relative z-10 flex flex-col items-center justify-center h-full text-center text-white '>
-                        <img className='mt-4' src='logo.png' alt='Logo' width={200} />
-                        <h2 className='text-success text-4xl md:text-6xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
-                          Скоро открытие
-                        </h2>
-                        <h2 className='text-2xl md:text-4xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
-                          Старт продаж с 20 июля
-                        </h2>
+                      <div className='relative z-10 text-center text-white'>
+                        <div className='flex flex-col items-center justify-center h-full'>
+                          <Image
+                            className='mt-4 w-64 md:w-72 lg:w-96 mb-40  md:mb-4'
+                            src='logo.png'
+                            alt='Logo'
+                          />
+                          <h2 className='text-success text-4xl md:text-6xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
+                            Скоро открытие
+                          </h2>
+                          <h2 className='text-2xl md:text-4xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
+                            Старт продаж с 20 июля
+                          </h2>
 
-                        <div className='flex flex-wrap justify-center items-center'>
-                          <div className='text-2xl md:text-4xl font-bold drop-shadow-lg'>
-                            Успей купить абонемент со
+                          <div className='flex flex-wrap justify-center items-center mb-4'>
+                            <div className='text-2xl md:text-4xl font-bold drop-shadow-lg'>
+                              Успей купить абонемент со
+                            </div>
+                            <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
+                              скидкой до
+                            </div>
+                            <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
+                              50%
+                            </div>
                           </div>
-                          <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
-                            скидкой до
-                          </div>
-                          <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
-                            50%
-                          </div>
+                          <Button as={Link} color='success' className='mt-4' href='#form'>
+                            Оставить заявку
+                          </Button>
                         </div>
-                        <Button as={Link} color='success' className='mt-4' href='#form'>
-                          Оставить заявку
-                        </Button>
                       </div>
                     </div>
                   ),
@@ -62,34 +68,34 @@ export default function Home() {
                 {
                   id: 2,
                   data: (
-                    <div className='relative w-full h-screen'>
+                    <div className='relative w-full h-screen flex items-center justify-center'>
                       <div
-                        className='absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-right-bottom md:bg-right-bottom '
+                        className='absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-right-bottom md:bg-right-bottom'
                         style={{ backgroundImage: `url(monya_app.png)` }}></div>
                       <div className='absolute inset-0 w-full h-full bg-black bg-opacity-50 md:bg-opacity-50 bg-opacity-70'></div>
-                      <div className='relative z-10 flex flex-col items-center justify-center h-full text-center text-white '>
-                        <img className='mt-4' src='logo.png' alt='Logo' width={200} />
-                        <h2 className='text-success text-4xl md:text-6xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
-                          Скоро открытие
-                        </h2>
-                        <h2 className='text-2xl md:text-4xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
-                          Старт продаж с 20 июля
-                        </h2>
+                      <div className='relative z-10 text-center text-white'>
+                        <div className='flex flex-col items-center justify-center h-full'>
+                          <Image
+                            className=' w-64 md:w-72 lg:w-96  mb-40  md:mb-4'
+                            src='logo.png'
+                            alt='Logo'
+                          />
+                          <h2 className='text-success text-4xl md:text-6xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
+                            Фитнес У дома
+                          </h2>
+                          <h2 className='text-2xl md:text-4xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
+                            для Вашей семьи
+                          </h2>
 
-                        <div className='flex flex-wrap justify-center items-center'>
-                          <div className='text-2xl md:text-4xl font-bold drop-shadow-lg'>
-                            Успей купить абонемент со
+                          <div className='flex flex-wrap justify-center items-center mb-4'>
+                            <div className='text-2xl md:text-4xl font-bold drop-shadow-lg'></div>
+                            <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'></div>
+                            <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'></div>
                           </div>
-                          <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
-                            скидкой до
-                          </div>
-                          <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
-                            50%
-                          </div>
+                          <Button as={Link} color='success' className='mt-4' href='#form'>
+                            Оставить заявку
+                          </Button>
                         </div>
-                        <Button as={Link} color='success' className='mt-4' href='#form'>
-                          Оставить заявку
-                        </Button>
                       </div>
                     </div>
                   ),
@@ -123,14 +129,16 @@ export default function Home() {
           </FadeInSection>
 
           <FadeInSection>
-            <div className=' m-4' id='form'>
-              <h4 className='text-large font-medium'>Присоединяйтесь к нам</h4>
-              <Divider />
-              <p className='text-small text-default-400'>
-                Успейте купить абонемент со скидкой до 50%
-              </p>
+            <div className='min-h-96    '>
+              <div className=' m-4 z-10' id='form'>
+                <h4 className='text-large font-medium'>Присоединяйтесь к нам</h4>
+                <Divider />
+                <p className='text-small text-default-400'>
+                  Успейте купить абонемент со скидкой до 50%
+                </p>
+              </div>
+              <MyForm />
             </div>
-            <MyForm />
           </FadeInSection>
 
           <FadeInSection>

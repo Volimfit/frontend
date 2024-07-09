@@ -34,33 +34,35 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
+          <div className='flex flex-col justify-center items-center sm:items-start  sm:justify-start'>
             <h6 className='flex justify-center font-semibold uppercase md:justify-start'>
               Социальные сети
             </h6>
-            <div className='mb-4 flex items-center justify-center sm:justify-start'>
-              <a href='https://t.me/VOLIMFIT' target='_blank'>
-                <Image src={'social/telegram.png'} alt='ff' width={50} radius='none' />{' '}
-              </a>
-              <a href='https://t.me/VOLIMFIT' target='_blank' className='ml-2'>
-                Telegram
-              </a>
-            </div>
-            <div className='mb-4 flex items-center justify-center sm:justify-start'>
-              <a href='https://taplink.cc/volimfit' target='_blank'>
-                <Image src={'social/taplink.png'} alt='ff' width={50} radius='none' />
-              </a>
-              <a href='https://taplink.cc/volimfit' target='_blank' className='ml-2'>
-                Taplink
-              </a>
-            </div>
-            <div className='mb-4 flex items-center justify-center sm:justify-start'>
-              <a href='https://wa.me/+79197742220' target='_blank'>
-                <Image src={'social/whatsapp.png'} alt='ff' width={50} radius='none' />
-              </a>
-              <a href='https://wa.me/+79197742220' target='_blank' className='ml-2'>
-                Whatsapp
-              </a>
+            <div className='w-28 '>
+              <div className='mb-4 flex items-center justify-center sm:justify-start'>
+                <a href='https://t.me/VOLIMFIT' target='_blank'>
+                  <Image src={'social/telegram.png'} alt='ff' width={30} radius='none' />{' '}
+                </a>
+                <a href='https://t.me/VOLIMFIT' target='_blank' className='ml-2'>
+                  Telegram
+                </a>
+              </div>
+              <div className='mb-4 flex items-center justify-center sm:justify-start'>
+                <a href='https://taplink.cc/volimfit' target='_blank'>
+                  <Image src={'social/taplink.png'} alt='ff' width={30} radius='none' />
+                </a>
+                <a href='https://taplink.cc/volimfit' target='_blank' className='ml-2'>
+                  Taplink
+                </a>
+              </div>
+              <div className='mb-4 flex items-center justify-center sm:justify-start'>
+                <a href='https://wa.me/+79197742220' target='_blank'>
+                  <Image src={'social/whatsapp.png'} alt='ff' width={30} radius='none' />
+                </a>
+                <a href='https://wa.me/+79197742220' target='_blank' className='ml-2'>
+                  Whatsapp
+                </a>
+              </div>
             </div>
           </div>
 

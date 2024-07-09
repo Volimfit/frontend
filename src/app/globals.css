@@ -12,6 +12,13 @@ body {
     background-position: right 20% !important;
   }
 }
+.monya {
+  position: fixed;
+  top: 20px;
+
+  margin-inline: auto;
+  inset-inline: 0;
+}
 .embla {
   /* max-width: 48rem; */
   margin: auto;
