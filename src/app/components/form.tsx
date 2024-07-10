@@ -27,7 +27,7 @@ export default function MyForm() {
       // Ваш код для отправки данных на сервер
       console.log(data);
       // http://109.172.114.125:8111
-      const url = 'http://109.172.114.125:8111/mail/send-email';
+      const url = 'https://api.volimfit.ru/mail/send-email';
       const body = {
         number: data.phone,
         recaptcha: recaptchaValue,
