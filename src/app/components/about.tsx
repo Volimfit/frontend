@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client';
 
-import { Image } from '@nextui-org/react';
+import FadeCarousel from './fadeCarousel';
 
 export default function AboutCompany() {
   return (
@@ -19,13 +19,10 @@ export default function AboutCompany() {
             единоборств, зал групповых тренировок и массажный кабинет.
           </div>
         </div>
-        <div className='md:w-1/2 w-full'>
-          <Image
-            src='fit.jpg'
-            alt='Gym'
-            width='100%'
-            height='auto'
-            style={{ borderRadius: '8px' }}
+        <div className='md:w-1/2 '>
+          <FadeCarousel
+            slides={Array.from(Array(2).keys())}
+            options={{ loop: true, duration: 30 }}
           />
         </div>
       </div>
