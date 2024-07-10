@@ -106,7 +106,9 @@ export default function MyForm() {
         isInvalid={isInvalid || !!errors.phone}
       />
       <ReCAPTCHA
-        sitekey={`${process.env.RECAPTCHA_SECRET_KEY}`} // Замените на ваш site key
+        sitekey={`${
+          process.env.RECAPTCHA_SECRET_KEY || '6LeHuwwqAAAAAHvZD1LBGHyN9cogqSUoDTSsvfk8'
+        }`} // Замените на ваш site key
         onChange={(value: any) => setRecaptchaValue(value)}
       />
       <Checkbox {...register('terms', { required: true })} isInvalid={!!errors.terms}>
