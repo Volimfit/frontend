@@ -28,3 +28,5 @@ jobs:
         run: |
           echo "Compose Started..."
           docker compose up -d
+        env:
+          RECAPTCHA_SECRET_KEY: ${{ secrets.RECAPTCHA_SECRET_KEY }}
