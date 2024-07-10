@@ -28,7 +28,7 @@ export default function Footer() {
               <a href='#about'>пн-пт с 7:00 до 23:00</a>
             </p>
             <p className='mb-4'>
-              <a href='#section'>сб- вскр 9:00 до 22:00</a>
+              <a href='#section'>сб-вс c 9:00 до 22:00</a>
             </p>
           </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
             <h6 className='flex justify-center font-semibold uppercase md:justify-start'>
               Социальные сети
             </h6>
-            <div className='w-28 '>
+            <div className='w-32 '>
               <div className='mb-4 flex items-center justify-start sm:items-start sm:justify-start'>
                 <a href='https://t.me/VOLIMFIT' target='_blank'>
                   <Image src={'social/telegram.png'} alt='ff' width={30} radius='none' />{' '}
@@ -58,7 +58,7 @@ export default function Footer() {
                   <Image src={'social/whatsapp.png'} alt='ff' width={30} radius='none' />
                 </a>
                 <a href='https://wa.me/+79197742220' target='_blank' className='ml-2'>
-                  Whatsapp
+                  WhatsApp
                 </a>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function Footer() {
                   <path d='M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z' />
                 </svg>
               </span>
-              Москва, Каширский проезд, д.25, корп 4, пом 13Н
+              Москва, Каширский проезд, д.25, корп.4, пом.13Н
             </p>
           </div>
         </div>
