@@ -33,6 +33,7 @@ const config: Config = {
       animation: ['motion-safe'],
     },
   },
+  darkMode: 'class',
   plugins: [
     nextui({
       themes: {
