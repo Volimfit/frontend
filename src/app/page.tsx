@@ -106,38 +106,53 @@ export default function Home() {
           </FadeInSection>
           <FadeInSection>
             <div className=' m-4' id='about'>
-              <h4 className='text-large font-medium'>О нас</h4>
-              <Divider />
-              <p className='text-small text-default-400'>
+              <h4 className='text-large font-medium'>
                 Фитнес-клуб, где каждая деталь продумана до мелочей!
-              </p>
+              </h4>
+              <Divider />
+              {/* <p className='text-small text-default-400'></p> */}
             </div>
             <AboutCompany />
           </FadeInSection>
           <FadeInSection>
-            <div className=' m-4' id='section'>
-              <h4 className='text-large font-medium'>Секции</h4>
-              <Divider />
-              <p className='text-small text-default-400'>
-                Концепция VOLIMFIT разработана для всей семьи и направлена на персональные и
-                групповые тренировки для взрослых, подростков и детей от 5-ти лет. VOLIMFIT
-                предлагает широкий спектр групповых тренировок для взрослых
-              </p>
-            </div>
-
-            <Activity />
-          </FadeInSection>
-
-          <FadeInSection>
             <div
-              className='min-h-96   inset-0 w-full h-full bg-cover bg-no-repeat bg-[right_bottom_-10rem]   bg-contain bg-opacity-50   '
+              className='    '
+              id='section'
               style={{
-                backgroundImage: `url(weights.png)`,
+                backgroundImage: `url(wave.svg)`,
+                backgroundRepeat: 'repeat-x',
+                backgroundPosition: 'bottom',
+                backgroundSize: 'auto',
+                backgroundAttachment: 'local',
               }}>
-              <div className=' m-4 z-10' id='form'>
-                <h4 className='text-large font-medium'>Присоединяйтесь к нам</h4>
+              <div className='  container mx-auto flex w-full flex-col   max-w-7xl'>
+                <h4 className='text-large font-medium'>Секции</h4>
                 <Divider />
-                <p className='text-small text-default-400'>
+                <p className='text-large text-default-600'>
+                  Концепция VOLIMFIT разработана для всей семьи и направлена на персональные и
+                  групповые тренировки для взрослых, подростков и детей от 5-ти лет. VOLIMFIT
+                  предлагает широкий спектр групповых тренировок для взрослых
+                </p>
+
+                <Activity />
+              </div>
+            </div>
+            {/* </FadeInSection>
+
+          <FadeInSection> */}
+            <div
+              className='min-h-96   inset-0 w-full h-full     '
+              style={{
+                backgroundImage: `url(wave1.svg)`,
+                backgroundRepeat: 'repeat-x',
+                backgroundPosition: 'top',
+                backgroundSize: 'auto',
+                backgroundAttachment: 'local',
+              }}>
+              <div className='pt-5 sm:pt-20' id='form'>
+                <h4 className='text-large font-medium '>Присоединяйтесь к нам</h4>
+                <Divider />
+                <p className='text-large text-default-600'>
                   Успейте купить абонемент со скидкой до 50%
                 </p>
               </div>

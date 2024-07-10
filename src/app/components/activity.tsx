@@ -118,69 +118,59 @@ export default function Activity() {
   ];
 
   return (
-    <div className='container mx-auto  flex w-full flex-col p-4  max-w-7xl '>
-      <Tabs aria-label='Options'>
-        <Tab key='photos' title='Групповые занятия '>
-          <div className=' flex items-center justify-center'>
-            <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl'>
-              {adultActivities.map((activity, index) => (
-                <Card
-                  shadow='sm'
-                  key={index}
-                  isPressable
-                  onPress={() => console.log(activity.title)}>
-                  <CardBody className='overflow-visible p-0'>
-                    <Image
-                      shadow='sm'
-                      radius='lg'
-                      width='100%'
-                      alt={activity.title}
-                      className='w-full object-contain h-[140px]'
-                      src={activity.img}
-                    />
-                  </CardBody>
-                  <CardFooter className='div-small justify-between'>
-                    <div>
-                      <div>{activity.title}</div>
-                      <div>{activity.description}</div>
-                    </div>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
+    <Tabs aria-label='Options'>
+      <Tab key='photos' title='Групповые занятия '>
+        <div className=' flex items-center justify-center'>
+          <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl'>
+            {adultActivities.map((activity, index) => (
+              <Card shadow='sm' key={index} isPressable onPress={() => console.log(activity.title)}>
+                <CardBody className='overflow-visible p-0'>
+                  <Image
+                    shadow='sm'
+                    radius='lg'
+                    width='100%'
+                    alt={activity.title}
+                    className='w-full object-contain h-[140px]'
+                    src={activity.img}
+                  />
+                </CardBody>
+                <CardFooter className='div-small justify-between'>
+                  <div>
+                    <div>{activity.title}</div>
+                    <div>{activity.description}</div>
+                  </div>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
-        </Tab>
-        <Tab key='music' title='Занятия для детей'>
-          <div className=' flex items-center justify-center'>
-            <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl '>
-              {kidsActivities.map((activity, index) => (
-                <Card
-                  shadow='sm'
-                  key={index}
-                  isPressable
-                  onPress={() => console.log(activity.title)}>
-                  <CardBody className='overflow-visible p-0'>
-                    <Image
-                      shadow='sm'
-                      radius='lg'
-                      width='100%'
-                      alt={activity.title}
-                      className='w-full object-contain h-[140px]'
-                      src={activity.img}
-                    />
-                  </CardBody>
-                  <CardFooter className='div-small justify-between'>
-                    <div>
-                      <div>{activity.title}</div>
-                      <div>{activity.description}</div>
-                    </div>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
+        </div>
+      </Tab>
+      <Tab key='music' title='Занятия для детей'>
+        <div className=' flex items-center justify-center'>
+          <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl '>
+            {kidsActivities.map((activity, index) => (
+              <Card shadow='sm' key={index} isPressable onPress={() => console.log(activity.title)}>
+                <CardBody className='overflow-visible p-0'>
+                  <Image
+                    shadow='sm'
+                    radius='lg'
+                    width='100%'
+                    alt={activity.title}
+                    className='w-full object-contain h-[140px]'
+                    src={activity.img}
+                  />
+                </CardBody>
+                <CardFooter className='div-small justify-between'>
+                  <div>
+                    <div>{activity.title}</div>
+                    <div>{activity.description}</div>
+                  </div>
+                </CardFooter>
+              </Card>
+            ))}
           </div>
-        </Tab>
-      </Tabs>
-    </div>
+        </div>
+      </Tab>
+    </Tabs>
   );
 }

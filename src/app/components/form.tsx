@@ -92,29 +92,40 @@ export default function MyForm() {
   }
   return (
     <form
-      className='flex flex-col sm:justify-center sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 container mx-auto max-w-7xl'
+      className=' pt-5 sm:pt-10 sm:justify-center sm:flex-row items-center sm:space-y-0 sm:space-x-4 container mx-auto max-w-7xl'
       onSubmit={handleSubmit(onSubmit)}>
       <Input
         {...register('phone', { pattern: /^\+7\d{10}$/ })}
         type='tel'
         label='Номер'
+        size='lg'
+        className='w-full pt-5 sm:pt-10 '
         value={first}
         onChange={handlePhoneChange}
         variant='bordered'
-        fullWidth
         errorMessage={isInvalid || errors.phone ? 'Введите корректный номер телефона' : ''}
         isInvalid={isInvalid || !!errors.phone}
       />
+      <Checkbox
+        {...register('terms', { required: true })}
+        isInvalid={!!errors.terms}
+        className='p-0 m-0'>
+        Я согласен с правилами обработки персональных данных
+      </Checkbox>
       <ReCAPTCHA
+        className=' pt-5 sm:pt-10  pb-5 sm:pb-10'
         sitekey={`${
           process.env.RECAPTCHA_SECRET_KEY || '6LeHuwwqAAAAAHvZD1LBGHyN9cogqSUoDTSsvfk8'
         }`} // Замените на ваш site key
         onChange={(value: any) => setRecaptchaValue(value)}
       />
-      <Checkbox {...register('terms', { required: true })} isInvalid={!!errors.terms}>
-        Я согласен с правилами обработки персональных данных
-      </Checkbox>
-      <Button className='w-full sm:w-auto' color='success' isLoading={isLoading} type='submit'>
+
+      <Button
+        variant='ghost'
+        className='w-full sm:w-auto'
+        color='success'
+        isLoading={isLoading}
+        type='submit'>
         {isLoading ? 'Отправка...' : 'Оставить заявку'}
       </Button>
     </form>
