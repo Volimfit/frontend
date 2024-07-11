@@ -115,23 +115,14 @@ export default function Home() {
             <AboutCompany />
           </FadeInSection>
           <FadeInSection>
-            <div
-              className='    '
-              id='section'
-              style={{
-                backgroundImage: `url(wave.svg)`,
-                backgroundRepeat: 'repeat-x',
-                backgroundPosition: 'bottom',
-                backgroundSize: 'auto',
-                backgroundAttachment: 'local',
-              }}>
+            <div className='    ' id='section'>
               <div className='  container mx-auto flex w-full flex-col   max-w-7xl'>
-                <h4 className='text-large font-medium'>Секции</h4>
+                <h4 className='text-large font-medium'>Концепция</h4>
                 <Divider />
-                <p className='text-large text-default-600'>
+                <p className='text-large text-default-600 mb-4'>
                   Концепция VOLIMFIT разработана для всей семьи и направлена на персональные и
                   групповые тренировки для взрослых, подростков и детей от 5-ти лет. VOLIMFIT
-                  предлагает широкий спектр групповых тренировок для взрослых
+                  предлагает широкий спектр групповых тренировок для взрослых и детей.
                 </p>
 
                 <Activity />
@@ -144,12 +135,11 @@ export default function Home() {
               className='min-h-96   inset-0 w-full h-full     '
               style={{
                 backgroundImage: `url(wave1.svg)`,
-                backgroundRepeat: 'repeat-x',
-                backgroundPosition: 'top',
-                backgroundSize: 'auto',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'top left',
                 backgroundAttachment: 'local',
               }}>
-              <div className='pt-5 sm:pt-20' id='form'>
+              <div className='' id='form'>
                 <h4 className='text-large font-medium '>Присоединяйтесь к нам</h4>
                 <Divider />
                 <p className='text-large text-default-600'>

@@ -4,17 +4,17 @@ export default function Activity() {
   const adultActivities = [
     {
       title: 'Intensive training',
-      description: 'Интенсивные тренировки для повышения выносливости и силы',
+      description: 'Тренировки для повышения выносливости и силы ',
       img: 'intensive.png',
     },
     {
       title: 'TABATA',
-      description: 'Высокоинтенсивные интервальные тренировки',
+      description: 'Интервальные тренировки высокой интенсивности ',
       img: 'tabata.png',
     },
     {
-      title: 'Strong body',
-      description: 'Силовые тренировки для укрепления мышц',
+      title: 'BodyStrong',
+      description: 'Тренировки для укрепления мышц',
       img: 'strong-bod.png',
     },
     // {
@@ -24,7 +24,7 @@ export default function Activity() {
     // },
     {
       title: 'Бокс',
-      description: 'Тренировки по боксу для всех уровней',
+      description: 'Тренировки для всех уровней',
       img: 'boxing.png',
     },
     {
@@ -68,7 +68,7 @@ export default function Activity() {
       img: 'stretching.png',
     },
     {
-      title: 'PUMP',
+      title: 'BodyPump',
       description: 'Силовые тренировки с использованием штанг и гантелей',
       img: 'pump.png',
     },
@@ -82,22 +82,22 @@ export default function Activity() {
   const kidsActivities = [
     {
       title: 'Детское ОФП',
-      description: 'Общая физическая подготовка для детей',
+      description: 'Комплексный подход к физической подготовке',
       img: 'kids-fitness.png',
     },
     {
-      title: 'Джиу Джитсу',
+      title: 'Джиу-Джитсу',
       description: 'Боевые искусства и самооборона для детей',
       img: 'kids-jiu-jitsu.png',
     },
     {
       title: 'Художественная гимнастика',
-      description: 'Тренировки по художественной гимнастике',
+      description: 'Развитие координации движений и гибкости  у детей',
       img: 'kids-gymnastics.png',
     },
     {
       title: 'Бокс',
-      description: 'Тренировки по боксу для детей',
+      description: 'Тренировки для детей',
       img: 'kids-boxing.png',
     },
     // {
@@ -118,8 +118,8 @@ export default function Activity() {
   ];
 
   return (
-    <Tabs aria-label='Options'>
-      <Tab key='photos' title='Групповые занятия '>
+    <Tabs aria-label='Options' color='success'>
+      <Tab key='photos' title='Групповые занятия ' className='text-white/50'>
         <div className=' flex items-center justify-center'>
           <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl'>
             {adultActivities.map((activity, index) => (
@@ -134,7 +134,7 @@ export default function Activity() {
                     src={activity.img}
                   />
                 </CardBody>
-                <CardFooter className='div-small justify-between'>
+                <CardFooter className='div-small justify-center '>
                   <div>
                     <div>{activity.title}</div>
                     <div>{activity.description}</div>
@@ -150,7 +150,7 @@ export default function Activity() {
           <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl '>
             {kidsActivities.map((activity, index) => (
               <Card shadow='sm' key={index} isPressable onPress={() => console.log(activity.title)}>
-                <CardBody className='overflow-visible p-0'>
+                <CardBody className='overflow-visible p-0 '>
                   <Image
                     shadow='sm'
                     radius='lg'
@@ -160,7 +160,7 @@ export default function Activity() {
                     src={activity.img}
                   />
                 </CardBody>
-                <CardFooter className='div-small justify-between'>
+                <CardFooter className='div-small justify-center'>
                   <div>
                     <div>{activity.title}</div>
                     <div>{activity.description}</div>

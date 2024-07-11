@@ -3,6 +3,7 @@ import { EmblaOptionsType } from 'embla-carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
 import React, { useEffect, useState } from 'react';
+import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons';
 
 type PropType = {
   slides: any;
@@ -16,8 +17,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   ]);
   const [isPlaying, setIsPlaying] = useState(true);
 
+  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
+    usePrevNextButtons(emblaApi);
+
   useEffect(() => {
     const autoplay = emblaApi?.plugins()?.autoplay;
+    console.log('autoplay', autoplay);
     if (!autoplay) return;
 
     setIsPlaying(autoplay.isPlaying());
@@ -48,6 +53,19 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className='embla__buttons2'>
+        <PrevButton
+          // className='embla__button--prev1'
+          onClick={onPrevButtonClick}
+          disabled={prevBtnDisabled}
+        />
+        <NextButton
+          // className='embla__button--next1'
+          onClick={onNextButtonClick}
+          disabled={nextBtnDisabled}
+        />
       </div>
     </div>
   );

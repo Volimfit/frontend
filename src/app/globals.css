@@ -3,6 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.embla__buttons2 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: all; /* Allows clicks to pass through to the carousel */
+  z-index: 100;
+}
+
 .embla1 {
   max-width: 48rem;
   margin: auto;
@@ -195,7 +207,7 @@ body {
   height: 3.6rem;
   z-index: 1;
   border-radius: 50%;
-  color: #dedede;
+  color: #3bc9db;
   display: flex;
   align-items: center;
   justify-content: center;

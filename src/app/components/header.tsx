@@ -22,7 +22,7 @@ export default function Header() {
       href: '#about',
     },
     {
-      title: 'Секции',
+      title: 'Концепция',
       href: '#section',
     },
     {
@@ -68,7 +68,7 @@ export default function Header() {
         </NavbarItem>
         <NavbarItem>
           <Link href='#section' color='foreground'>
-            Секции
+            Концепция
           </Link>
         </NavbarItem>
         <NavbarItem>
