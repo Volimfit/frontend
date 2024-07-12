@@ -2,6 +2,7 @@ import { Button, Checkbox, Input } from '@nextui-org/react';
 import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
+import Privacy from './privacy';
 
 export default function MyForm() {
   const [first, setFirst] = useState('+7');
@@ -112,6 +113,7 @@ export default function MyForm() {
         className='p-0 m-0'>
         Я согласен с правилами обработки персональных данных
       </Checkbox>
+      <Privacy />
       <ReCAPTCHA
         className=' pt-5 sm:pt-10  pb-5 sm:pb-10'
         sitekey={`${

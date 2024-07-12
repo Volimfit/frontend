@@ -86,26 +86,45 @@ export default function Home() {
                           <h2 className='text-2xl md:text-4xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
                             для Вашей семьи
                           </h2>
-                          <div className='flex flex-wrap justify-center items-center mb-4 space-x-4'>
+                          <div className='flex flex-wrap justify-center items-start mb-4 space-x-4'>
                             <div className='flex flex-col items-center'>
                               <Image
+                                radius='none'
+                                src='/dumbbell.png'
+                                alt='Icon 2'
+                                className='w-7 md:w-16'
+                              />
+                              <p className='mt-2 text-xs md:text-xl'>
+                                Тренажерный <br /> зал
+                              </p>
+                            </div>
+                            <div className='flex flex-col items-center'>
+                              <Image
+                                radius='none'
+                                src='/martial-arts.png'
+                                alt='Icon 3'
+                                className='w-7 md:w-16'
+                              />
+                              <p className='mt-2  text-xs md:text-xl'>Единоборства</p>
+                            </div>
+                            <div className='flex flex-col items-center'>
+                              <Image
+                                radius='none'
+                                src='/heart.png'
+                                alt='Icon 4'
+                                className='w-7 md:w-16'
+                              />
+                              <p className='mt-2 text-xs md:text-xl'>Crossfit</p>
+                            </div>
+
+                            <div className='flex flex-col items-center'>
+                              <Image
+                                radius='none'
                                 src='/facial-treatment.png'
                                 alt='Icon 1'
                                 className='w-7 md:w-16'
                               />
                               <p className='mt-2 text-xs md:text-xl'>Массаж</p>
-                            </div>
-                            <div className='flex flex-col items-center'>
-                              <Image src='/dumbbell.png' alt='Icon 2' className='w-7 md:w-16' />
-                              <p className='mt-2 text-xs md:text-xl'>Тренажерный зал</p>
-                            </div>
-                            <div className='flex flex-col items-center'>
-                              <Image src='/martial-arts.png' alt='Icon 3' className='w-7 md:w-16' />
-                              <p className='mt-2  text-xs md:text-xl'>Единоборства</p>
-                            </div>
-                            <div className='flex flex-col items-center'>
-                              <Image src='/heart.png' alt='Icon 4' className='w-7 md:w-16' />
-                              <p className='mt-2 text-xs md:text-xl'>Crossfit</p>
                             </div>
                           </div>
                           <div className='flex flex-wrap justify-center items-center mb-4'>
