@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://volimfit.r
+Host: https://volimfit.ru
 
 # Sitemaps
-Sitemap: https://volimfit.r/sitemap.xml
+Sitemap: https://volimfit.ru/sitemap.xml

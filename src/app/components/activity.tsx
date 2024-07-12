@@ -38,7 +38,7 @@ export default function Activity() {
       img: 'yoga.png',
     },
     {
-      title: 'Джиу Джитсу',
+      title: 'Джиу-Джитсу',
       description: 'Боевые искусства и самооборона',
       img: 'jiu-jitsu.png',
     },
