@@ -81,7 +81,7 @@ export default function Home() {
                             alt='Logo'
                           />
                           <h2 className='text-success text-4xl md:text-6xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
-                            Фитнес У дома
+                            Фитнес у дома
                           </h2>
                           <h2 className='text-2xl md:text-4xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
                             для Вашей семьи
