@@ -147,9 +147,9 @@ export default function Home() {
           </FadeInSection>
           <FadeInSection>
             <div className=' m-4' id='about'>
-              <h4 className='text-large font-medium'>
+              <h1 className='text-large font-medium'>
                 Фитнес-клуб, где каждая деталь продумана до мелочей!
-              </h4>
+              </h1>
               <Divider />
               {/* <p className='text-small text-default-400'></p> */}
             </div>
@@ -160,11 +160,11 @@ export default function Home() {
               <div className='  container mx-auto flex w-full flex-col   max-w-7xl'>
                 <h4 className='text-large font-medium'>Концепция</h4>
                 <Divider />
-                <p className='text-large text-default-600 mb-4'>
+                <h2 className='text-large text-default-600 mb-4'>
                   Концепция VOLIMFIT разработана для всей семьи и направлена на персональные и
                   групповые тренировки для взрослых, подростков и детей от 5-ти лет. VOLIMFIT
                   предлагает широкий спектр групповых тренировок для взрослых и детей.
-                </p>
+                </h2>
 
                 <Activity />
               </div>
