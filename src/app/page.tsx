@@ -185,7 +185,7 @@ export default function Home() {
                 <h4 className='text-2xl font-medium '>Присоединяйтесь к нам</h4>
                 <Divider className='bg-sky-950 mb-4 md:mb-0' />
                 <p className='text-large text-default-500'>
-                  Успейте купить абонемент со скидкой до 50%
+                  Оставьте заявку и получите абонемент со скидкой до 50%
                 </p>
               </div>
               <MyForm />
