@@ -76,7 +76,8 @@ export default function Footer() {
                   <path d='M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z' />
                 </svg>
               </span>
-              Volimfit@yandex.ru
+
+              <a href='mailto:Volimfit@yandex.ru'>Volimfit@yandex.ru</a>
             </p>
             <p className='mb-4 flex items-center justify-center md:justify-start'>
               <span className='me-3 [&>svg]:h-5 [&>svg]:w-5'>
@@ -88,7 +89,8 @@ export default function Footer() {
                   />
                 </svg>
               </span>
-              +7 (926) 074-22-20
+
+              <a href='tel:+7(926)074-22-20'>+7 (926) 074-22-20</a>
             </p>
             <p className='flex items-center justify-center md:justify-start mb-3'>
               <span className='me-3 [&>svg]:h-5 [&>svg]:w-5'>
@@ -100,7 +102,8 @@ export default function Footer() {
                   />
                 </svg>
               </span>
-              +7 (919) 774-22-20
+
+              <a href='tel:+7(919)774-22-20'>+7 (919) 774-22-20</a>
             </p>
 
             <p className=' flex items-center justify-center md:justify-start '>
