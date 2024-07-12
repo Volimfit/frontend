@@ -86,12 +86,34 @@ export default function Home() {
                           <h2 className='text-2xl md:text-4xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
                             для Вашей семьи
                           </h2>
-
+                          <div className='flex flex-wrap justify-center items-center mb-4 space-x-4'>
+                            <div className='flex flex-col items-center'>
+                              <Image
+                                src='/facial-treatment.png'
+                                alt='Icon 1'
+                                className='w-7 md:w-16'
+                              />
+                              <p className='mt-2 text-xs md:text-xl'>Массаж</p>
+                            </div>
+                            <div className='flex flex-col items-center'>
+                              <Image src='/dumbbell.png' alt='Icon 2' className='w-7 md:w-16' />
+                              <p className='mt-2 text-xs md:text-xl'>Тренажерный зал</p>
+                            </div>
+                            <div className='flex flex-col items-center'>
+                              <Image src='/martial-arts.png' alt='Icon 3' className='w-7 md:w-16' />
+                              <p className='mt-2  text-xs md:text-xl'>Единоборства</p>
+                            </div>
+                            <div className='flex flex-col items-center'>
+                              <Image src='/heart.png' alt='Icon 4' className='w-7 md:w-16' />
+                              <p className='mt-2 text-xs md:text-xl'>Crossfit</p>
+                            </div>
+                          </div>
                           <div className='flex flex-wrap justify-center items-center mb-4'>
                             <div className='text-2xl md:text-4xl font-bold drop-shadow-lg'></div>
                             <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'></div>
                             <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'></div>
                           </div>
+
                           <Button as={Link} color='success' className='mt-4' href='#form'>
                             Оставить заявку
                           </Button>
@@ -131,18 +153,20 @@ export default function Home() {
             {/* </FadeInSection>
 
           <FadeInSection> */}
-            <div
-              className='min-h-96   inset-0 w-full h-full     '
-              style={{
-                backgroundImage: `url(wave1.svg)`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'top left',
-                backgroundAttachment: 'local',
-              }}>
-              <div className='' id='form'>
-                <h4 className='text-large font-medium '>Присоединяйтесь к нам</h4>
-                <Divider />
-                <p className='text-large text-default-600'>
+            <div className='min-h-96   inset-0 w-full h-full     '>
+              <div
+                className='min-h-32 md:min-h-48 container mx-auto max-w-7xl  p-4  animate-wave rounded-lg'
+                id='form'
+                style={{
+                  backgroundImage: `url(/wave1.svg)`,
+                  backgroundRepeat: 'no-repeat',
+
+                  backgroundAttachment: 'local',
+                  backgroundColor: '#3bc9db',
+                }}>
+                <h4 className='text-2xl font-medium '>Присоединяйтесь к нам</h4>
+                <Divider className='bg-sky-950 mb-4 md:mb-0' />
+                <p className='text-large text-default-500'>
                   Успейте купить абонемент со скидкой до 50%
                 </p>
               </div>

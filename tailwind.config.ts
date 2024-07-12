@@ -12,11 +12,16 @@ const config: Config = {
     extend: {
       animation: {
         fadeIn: 'fadeIn 1.5s ease-in-out',
+        wave: 'wave 10s linear infinite',
       },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        wave: {
+          '0%': { backgroundPosition: '0% 0%' },
+          '100%': { backgroundPosition: '200% 200%' },
         },
       },
       fontFamily: {
@@ -48,6 +53,9 @@ const config: Config = {
           // ...
           colors: {
             success: '#3bc9db',
+            default: {
+              500: '#ffffff',
+            },
           },
         },
         // ... custom themes

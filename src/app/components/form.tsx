@@ -92,14 +92,14 @@ export default function MyForm() {
   }
   return (
     <form
-      className=' pt-5 sm:pt-10 sm:justify-center sm:flex-row items-center sm:space-y-0 sm:space-x-4 container mx-auto max-w-7xl'
+      className='  sm:justify-center sm:flex-row items-center sm:space-y-0 sm:space-x-4 container mx-auto max-w-7xl'
       onSubmit={handleSubmit(onSubmit)}>
       <Input
         {...register('phone', { pattern: /^\+7\d{10}$/ })}
         type='tel'
         label='Номер'
         size='lg'
-        className='w-full pt-5 sm:pt-10 '
+        className='w-full  '
         value={first}
         onChange={handlePhoneChange}
         variant='bordered'

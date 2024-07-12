@@ -2,7 +2,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@keyframes wave {
+  0% {
+    background-position: -250% 0%;
+  }
 
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+.animate-wave {
+  animation: wave 3s linear infinite;
+}
+@media (max-width: 640px) {
+  .animate-wave {
+    animation: wave 5s linear infinite;
+  }
+}
 .embla__buttons2 {
   position: absolute;
   top: 50%;
@@ -12,7 +29,6 @@
   justify-content: space-between;
   transform: translateY(-50%);
   pointer-events: all; /* Allows clicks to pass through to the carousel */
-  z-index: 100;
 }
 
 .embla1 {
