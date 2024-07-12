@@ -46,6 +46,7 @@ const config: Config = {
           // ...
 
           colors: {
+            background: '#000',
             success: '#3bc9db',
           },
         },
