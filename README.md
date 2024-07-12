@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VOLIMFIT: Описание сайта
 
-## Getting Started
+## О клубе
 
-First, run the development server:
+VOLIMFIT — это фитнес-клуб, где каждая деталь продумана до мелочей. Клуб предлагает широкий спектр спортивных услуг и подходит для всех, кто ищет удобный и эффективный фитнес-зал. Общая площадь клуба составляет 560 кв. м.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Услуги
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Тренажерный зал**: Просторный зал с панорамными окнами и супер-технологичным оборудованием от Foreman.
+- **Зона Crossfit**.
+- **Зал единоборств**.
+- **Зал групповых тренировок**.
+- **Массажный кабинет**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Концепция
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+VOLIMFIT ориентирован на персональные и групповые тренировки для взрослых, подростков и детей от 5 лет. Клуб предлагает широкий спектр групповых занятий для всех возрастов.
 
-## Learn More
+## Контакты
 
-To learn more about Next.js, take a look at the following resources:
+- **Адрес**: Москва, Каширский проезд, д. 25, корп. 4, пом. 13Н
+- **Телефон**: +7 (926) 074-22-20, +7 (919) 774-22-20
+- **Email**: Volimfit@yandex.ru
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Время работы
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Пн-Пт**: с 7:00 до 23:00
+- **Сб-Вс**: с 9:00 до 22:00
 
-## Deploy on Vercel
+## Социальные сети
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Telegram](https://t.me)
+- [Taplink](https://taplink.cc)
+- [WhatsApp](https://wa.me)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Полезные ссылки
+
+- [Политика конфиденциальности](#)
+
+## Примечания
+
+- Старт продаж с 20 июля: Успей купить абонемент со скидкой до 50%.
+- Оставить заявку на сайте для приобретения абонемента.
