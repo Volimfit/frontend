@@ -76,7 +76,7 @@ export default function Home() {
                       <div className='relative z-10 text-center text-white'>
                         <div className='flex flex-col items-center justify-center h-full'>
                           <Image
-                            className=' w-64 md:w-72 lg:w-96  mb-40  md:mb-4'
+                            className=' w-64 md:w-72 lg:w-96  mb-20  md:mb-4'
                             src='logo.png'
                             alt='Logo'
                           />
