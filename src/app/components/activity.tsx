@@ -136,8 +136,8 @@ export default function Activity() {
                 </CardBody>
                 <CardFooter className='div-small justify-center '>
                   <div>
-                    <div>{activity.title}</div>
-                    <div>{activity.description}</div>
+                    <div className='text-large font-medium text-white mb-1'>{activity.title}</div>
+                    <div className='text-default-600'>{activity.description}</div>
                   </div>
                 </CardFooter>
               </Card>
@@ -162,8 +162,8 @@ export default function Activity() {
                 </CardBody>
                 <CardFooter className='div-small justify-center'>
                   <div>
-                    <div>{activity.title}</div>
-                    <div>{activity.description}</div>
+                    <div className='text-large font-medium text-white mb-1'>{activity.title}</div>
+                    <div className='text-default-600'>{activity.description}</div>
                   </div>
                 </CardFooter>
               </Card>

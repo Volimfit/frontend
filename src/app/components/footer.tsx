@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
 
           <div className='flex flex-col justify-center items-center sm:items-start  sm:justify-start'>
-            <h6 className='flex justify-center font-semibold uppercase md:justify-start'>
+            <h6 className='mb-4  flex justify-center font-semibold uppercase md:justify-start'>
               Социальные сети
             </h6>
             <div className='w-32 '>
