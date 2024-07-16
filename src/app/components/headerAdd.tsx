@@ -16,7 +16,7 @@ export default function HeaderAdd() {
         +7 (919) 774-22-20
       </a>
       <div className='flex justify-center items-center'>
-        <a href='https://t.me/VOLIMFIT' target='_blank'>
+        <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank'>
           <svg
             data-mode='stroke'
             xmlns='http://www.w3.org/2000/svg'
