@@ -1,3 +1,4 @@
+import 'intersection-observer';
 import React, { useEffect, useRef } from 'react';
 
 interface FadeInSectionProps {
@@ -18,7 +19,8 @@ const FadeInSection: React.FC<FadeInSectionProps> = ({ children }) => {
         }
       },
       {
-        threshold: 0.1,
+        root: null, // Use the root option instead of threshold
+        rootMargin: '0px',
       },
     );
 
