@@ -38,10 +38,10 @@ export default function Footer() {
             </h6>
             <div className='w-32 '>
               <div className='mb-4 flex items-center justify-start sm:items-start sm:justify-start'>
-                <a href='https://t.me/VOLIMFIT' target='_blank'>
+                <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank'>
                   <Image src={'social/telegram.png'} alt='ff' width={30} radius='none' />{' '}
                 </a>
-                <a href='https://t.me/VOLIMFIT' target='_blank' className='ml-2'>
+                <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank' className='ml-2'>
                   Telegram
                 </a>
               </div>
