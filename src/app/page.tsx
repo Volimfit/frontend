@@ -41,20 +41,20 @@ export default function Home() {
                           <h2 className='text-success text-4xl md:text-6xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
                             Скоро открытие
                           </h2>
-                          <h2 className='text-2xl md:text-4xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
+                          {/* <h2 className='text-2xl md:text-4xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
                             Старт продаж с 20 июля
-                          </h2>
+                          </h2> */}
 
                           <div className='flex flex-wrap justify-center items-center mb-4'>
                             <div className='text-2xl md:text-4xl font-bold drop-shadow-lg'>
                               Успей купить абонемент со
                             </div>
                             <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
-                              скидкой до
+                              скидкой
                             </div>
-                            <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
+                            {/* <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
                               50%
-                            </div>
+                            </div> */}
                           </div>
                           <Button as={Link} color='success' className='mt-4' href='#form'>
                             Оставить заявку
@@ -185,7 +185,7 @@ export default function Home() {
                 <h4 className='text-2xl font-medium '>Присоединяйтесь к нам</h4>
                 <Divider className='bg-sky-950 mb-4 md:mb-0' />
                 <p className='text-large text-default-500'>
-                  Оставьте заявку и получите абонемент со скидкой до 50%
+                  Оставьте заявку и получите абонемент со скидкой
                 </p>
               </div>
               <MyForm />
