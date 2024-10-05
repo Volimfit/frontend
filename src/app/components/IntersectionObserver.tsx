@@ -2,10 +2,10 @@ import 'intersection-observer';
 import React, { useEffect, useRef } from 'react';
 
 interface FadeInSectionProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-const FadeInSection: React.FC<FadeInSectionProps> = ({ children }) => {
+const FadeInSection: React.FC<FadeInSectionProps> = ({ children = <div>Default content</div> }) => {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {

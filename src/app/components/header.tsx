@@ -26,6 +26,10 @@ export default function Header() {
       href: '#section',
     },
     {
+      title: 'Тренеры',
+      href: '#trainers',
+    },
+    {
       title: 'Контакты',
       href: '#contact',
     },
@@ -41,38 +45,45 @@ export default function Header() {
         <NavbarBrand>
           <Image
             className='animated-logo'
-            src={'logo_only.png'}
+            src={'/logo_only.png'}
             alt='ff'
             width={100}
             radius='none'
           />
-          <Image radius='none' src={'logo_text.png'} alt='ff' width={150} />
+          <Image radius='none' src={'/logo_text.png'} alt='ff' width={150} />
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className='hidden sm:flex gap-4' justify='center'>
+      <Link color='foreground' href='/'>
         <NavbarBrand className='p-4 '>
           <Image
             className=' animated-logo'
             radius='none'
-            src={'logo_only.png'}
+            src={'/logo_only.png'}
             alt='ff'
             width={100}
           />
-          <Image radius='none' src={'logo_text.png'} alt='ff' width={150} />
+          <Image radius='none' src={'/logo_text.png'} alt='ff' width={150} />
         </NavbarBrand>
+        </Link>
         <NavbarItem>
-          <Link color='foreground' href='#about'>
+          <Link color='foreground' href='/#about'>
             О клубе
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href='#section' color='foreground'>
+          <Link href='/#section' color='foreground'>
             Концепция
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href='#contact' color='foreground'>
+          <Link color='foreground' href='/#trainers'>
+            Тренеры
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href='/#contact' color='foreground'>
             Контакты
           </Link>
         </NavbarItem>
@@ -98,7 +109,7 @@ export default function Header() {
               onClick={() => {
                 setIsMenuOpen(false);
               }}
-              href={item.href}
+              href={`/${item.href}`}
               size='lg'>
               {item.title}
             </Link>

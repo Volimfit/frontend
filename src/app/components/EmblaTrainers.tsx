@@ -45,13 +45,13 @@ const EmblaTrainers: React.FC<PropType> = (props) => {
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
 
-        <div className="embla__dots">
+        <div className='embla__dots1'>
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
+              className={'embla__dot1'.concat(
+                index === selectedIndex ? ' embla__dot--selected1' : '',
               )}
             />
           ))}
