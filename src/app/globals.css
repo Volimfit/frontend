@@ -2,6 +2,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.diagonal-bg {
+  background: linear-gradient(135deg, #18181b 50%, #35909b 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
 @keyframes wave {
   0% {
     background-position: -250% 0%;
