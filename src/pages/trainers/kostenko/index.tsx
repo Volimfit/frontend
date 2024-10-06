@@ -15,7 +15,7 @@ const MonyaPage = () => {
   return (
     <>
       <Head>
-        <title>VOLIMFIT: Тренер {data.name}</title>
+        <title>VOLIMFIT | Тренер {String(data.name)}</title>
         <meta name="description" content={data.title} />
         <meta name="keywords" content={data?.roles?.join()} />
         <meta property="og:title" content={`VOLIMFIT: Тренер ${data.name}`} />
