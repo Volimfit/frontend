@@ -1,7 +1,7 @@
 import FadeInSection from "@/app/components/IntersectionObserver";
 import Layout from "@/app/components/layout";
 import Maps from "@/app/components/maps";
-import SectionForm from "@/app/components/SectionForm";
+import SectionFormTrainer from "@/app/components/SectionFormTrainer";
 import TrainerCard from "@/app/components/TrainerCard";
 import { findTrainerByLink } from "@/app/data/constant";
 import Head from "next/head";
@@ -15,14 +15,14 @@ const MonyaPage = () => {
   return (
     <>
       <Head>
-        <title>VOLIMFIT - Фитнес-клуб у дома</title>
-        <meta name="description" content="Фитнес-клуб, где каждая деталь продумана до мелочей. Тренировки для всей семьи в Москве!" />
-        <meta name="keywords" content="фитнес, спортзал, тренировки, Crossfit, семейный фитнес, Москва" />
-        <meta property="og:title" content="VOLIMFIT - Фитнес-клуб у дома" />
-        <meta property="og:description" content="Тренировки для всей семьи в Москве! Присоединяйтесь к нашему фитнес-клубу и получите абонемент со скидкой!" />
-        <meta property="og:url" content="https://volimfit.ru" />
+        <title>VOLIMFIT: Тренер {data.name}</title>
+        <meta name="description" content={data.title} />
+        <meta name="keywords" content={data?.roles?.join()} />
+        <meta property="og:title" content={`VOLIMFIT: Тренер ${data.name}`} />
+        <meta property="og:description" content={`VOLIMFIT: Тренер ${data.name}`} />
+        <meta property="og:url" content={`https://volimfit.ru/trainers/${link}`} />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://volimfit.ru/logo.png" />
+        <meta property="og:image" content={`https://volimfit.ru/${data.imageSrc}`} />
       </Head>
       <Layout>
         <FadeInSection>
@@ -30,7 +30,7 @@ const MonyaPage = () => {
             {...data} />
         </FadeInSection>
         <FadeInSection>
-          <SectionForm />
+          <SectionFormTrainer name={data.name} />
         </FadeInSection>
 
         <FadeInSection>

@@ -16,14 +16,27 @@ const TrainersPage = ({  }) => {
   return (
     <>
     <Head>
-      <title>VOLIMFIT - Фитнес-клуб у дома</title>
-      <meta name="description" content="Фитнес-клуб, где каждая деталь продумана до мелочей. Тренировки для всей семьи в Москве!" />
-      <meta name="keywords" content="фитнес, спортзал, тренировки, Crossfit, семейный фитнес, Москва" />
-      <meta property="og:title" content="VOLIMFIT - Фитнес-клуб у дома" />
-      <meta property="og:description" content="Тренировки для всей семьи в Москве! Присоединяйтесь к нашему фитнес-клубу и получите абонемент со скидкой!" />
-      <meta property="og:url" content="https://volimfit.ru" />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="https://volimfit.ru/logo.png" />
+    <title>Тренеры VOLIMFIT – Профессиональные тренировки для всей семьи в Москве</title>
+<meta name="description" content="Тренеры фитнес-клуба VOLIMFIT в Москве: персональные программы, профессиональный подход и тренировки для всей семьи. Присоединяйтесь к нам и достигайте своих целей!"/>
+<meta name="keywords" content="тренеры фитнес, персональные тренировки, семейный фитнес, тренеры Москва, фитнес-тренер, Crossfit, фитнес клуб у дома"/>
+<meta name="robots" content="index, follow"/>
+<meta name="author" content="VOLIMFIT"/>
+
+<meta property="og:title" content="VOLIMFIT – Тренеры фитнес-клуба в Москве" />
+<meta property="og:description" content="Познакомьтесь с тренерами VOLIMFIT – профессиональные тренировки и индивидуальный подход для всей семьи. Присоединяйтесь к нам!" />
+<meta property="og:url" content="https://volimfit.ru/trainers" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://volimfit.ru/logo.png" />
+
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Тренеры VOLIMFIT – Ваши проводники к успеху" />
+<meta name="twitter:description" content="Познакомьтесь с нашими тренерами и начните путь к здоровью и силе с профессионалами VOLIMFIT." />
+<meta name="twitter:image" content="https://volimfit.ru/logo.png" />
+
+
+<link rel="canonical" href="https://volimfit.ru/trainers" />
+
     </Head>
     <Layout>
       <FadeInSection>
