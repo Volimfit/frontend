@@ -13,7 +13,7 @@ import Maps from '@/app/components/maps';
 import TrainerSlide from '@/app/components/TrainerSlide';
 import { trainers } from '@/app/data/constant';
 import { Divider } from '@nextui-org/divider';
-import { Button, Image } from '@nextui-org/react';
+import { Button, Card, CardBody, CardFooter, Image } from '@nextui-org/react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -189,28 +189,27 @@ export default function Home() {
 
                 </div>
                 <div className='container mx-auto p-4 max-w-7xl'>
-
-                  <EmblaTrainers
-                    slides={
-                      trainers.map((el) => {
-                        return {
-                          id: el.id,
-                          data: (
-                            <TrainerSlide
-                              name={el.name}
-                              title={el.title}
-                              link={el.link}
-                              img={el.imageSrc}
-
-                            />
-                          )
-                        }
-                      }
-                      )
-                    }
-                    options={{ loop: true, duration: 30 }}
-
-                  />
+                <div className="gap-6 grid grid-cols-2 sm:grid-cols-4">
+                {trainers.map((item, index) => (
+        <Link  key={index} href={`/trainers/${item.link}`} className="mb-4">
+        <Card shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")}>
+          <CardBody className="overflow-visible p-0">
+            <Image
+              shadow="sm"
+              radius="lg"
+              
+              alt={item.title}
+              className="w-full object-cover "
+              src={item.imageSrc}
+            />
+          </CardBody>
+          <CardFooter className="flex-col content-start items-start">
+            <b className="text-left">{item.name}</b>
+            <p className="text-default-500 text-left">{item.title}</p>
+          </CardFooter>
+        </Card>
+        </Link>
+      ))}   </div>
                 </div>
               </FadeInSection>
               <div className='min-h-96   inset-0 w-full h-full     '>
