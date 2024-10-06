@@ -30,7 +30,7 @@ const FadeCarousel: React.FC<PropType> = (props) => {
                 className='embla__slide__img1'
                 width='100%'
                 height='auto'
-                src={'slider-' + index + '.jpg'}
+                src={'/slider-' + index + '.jpg'}
                 alt='Your alt text'
               />
             </div>

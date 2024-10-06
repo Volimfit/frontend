@@ -13,7 +13,7 @@ import Maps from '@/app/components/maps';
 import TrainerSlide from '@/app/components/TrainerSlide';
 import { trainers } from '@/app/data/constant';
 import { Divider } from '@nextui-org/divider';
-import { Button, Card, CardBody, CardFooter, Image } from '@nextui-org/react';
+import { Button, Card, CardBody, CardFooter, CardHeader, Image } from '@nextui-org/react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -192,8 +192,12 @@ export default function Home() {
                 <div className="gap-6 grid grid-cols-2 sm:grid-cols-4">
                 {trainers.map((item, index) => (
         <Link  key={index} href={`/trainers/${item.link}`} className="mb-4">
-        <Card shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")}>
-          <CardBody className="overflow-visible p-0">
+        <Card shadow="sm" key={index} isPressable onPress={() => console.log("item pressed")} className=''>
+          <CardBody className="overflow-visible p-0 z-0 justify-end">
+          <CardHeader className="absolute bg-[#000000c4] z-20 flex-col !items-start   ">
+            <h4 className="text-white font-medium text-large">{item.name}</h4>
+          
+          </CardHeader>
             <Image
               shadow="sm"
               radius="lg"
@@ -204,7 +208,7 @@ export default function Home() {
             />
           </CardBody>
           <CardFooter className="flex-col content-start items-start">
-            <b className="text-left">{item.name}</b>
+          
             <p className="text-default-500 text-left">{item.title}</p>
           </CardFooter>
         </Card>
