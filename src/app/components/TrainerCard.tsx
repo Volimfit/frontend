@@ -18,6 +18,7 @@ interface TrainerSlideProps {
   achievements: string[];
   imageSrc: string;
   roles: string[];
+  category:string
 }
 
 export default function TrainerCard({
@@ -28,7 +29,8 @@ export default function TrainerCard({
   specializations,
   achievements,
   imageSrc,
-  roles
+  roles,
+  category
 }: TrainerSlideProps) {
 
 
@@ -40,10 +42,16 @@ export default function TrainerCard({
         <BreadcrumbItem>{name}</BreadcrumbItem>
       </Breadcrumbs>
       <Card className='mb-4 bg-black'>
-      <div className="block m-4 lg:hidden ">
-              <p className="text-2xl text-white/60 uppercase font-bold">{title}</p>
-              <h2 className="text-3xl text-white font-bold">{name}</h2>
-            </div>
+        <div className="block m-4 lg:hidden ">
+          <h2 className="text-3xl text-white font-bold">{name}</h2>
+          <p className=" text-white/60  font-bold">{title}</p>
+         <div className='flex'>
+         <div className="text-white/90   font-bold">
+            Категория:
+          </div> <div className='ml-1'>{category}</div>
+         </div>
+         
+        </div>
         <div className='flex flex-wrap justify-center'>
           <div className='flex-none '>
             <Image
@@ -60,6 +68,9 @@ export default function TrainerCard({
               <h2 className="text-3xl text-white font-bold">{name}</h2>
             </div>
             <Divider className='mb-4' />
+            <p className="text-2xl text-white/90   font-bold hidden lg:block ">
+              Категория
+            </p> <div className='mb-1'>{category}</div>
             <p className="text-2xl text-white/90   font-bold">
               Образование
             </p> <div className='mb-1'>{education}</div>
