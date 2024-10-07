@@ -4,13 +4,15 @@ import { Map, Placemark, YMaps } from '@pbe/react-yandex-maps';
 export default function Maps() {
   return (
     <div className=' p-5 '>
-      <div className=' m-4' id='section'>
+      <div className=' rounded-lg m-4' id='section'>
         <h4 className='text-large font-medium'>Наш адрес</h4>
         <Divider />
       </div>
       <YMaps>
         <Map
           width='100%'
+
+
           // включаем модули, отвечающие за всплывающие окна над геообъектами
           modules={['geoObject.addon.balloon', 'geoObject.addon.hint']}
           state={{

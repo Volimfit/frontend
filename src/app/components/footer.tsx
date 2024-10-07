@@ -1,12 +1,13 @@
 'use client';
 
-import { Image } from '@nextui-org/react';
+import { Divider, Image } from '@nextui-org/react';
 
 export default function Footer() {
   return (
     <footer
-      className='bg-zinc-50 text-center text-surface-75 dark:bg-neutral-700 dark:text-white-75 lg:text-left'
+      className=' text-center text-surface-75 dark:text-white-75 lg:text-left'
       id='contact'>
+      <Divider />
       <div className='mx-6 py-5 text-center md:text-left'>
         <div className='grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4'>
           <div className=''>

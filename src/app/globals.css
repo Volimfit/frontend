@@ -3,7 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.ymaps-2-1-79-map{
+  border-radius:40px!important
+}
+.ymaps{
+  border-radius:40px!important
+}
+.ymaps-2-1-79-inner-panes{
+  border-radius:40px!important
+}
 .diagonal-bg {
   background: linear-gradient(135deg, #18181b 50%, #35909b 50%);
   position: absolute;
