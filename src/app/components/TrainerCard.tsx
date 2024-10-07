@@ -95,11 +95,11 @@ export default function TrainerCard({
               ))}
             </ul>
 
-            {roles.map((role, index) => (
+            {/* {roles.map((role, index) => (
               <Chip key={index} color="primary" variant="solid" className="mt-2">
                 {role}
               </Chip>
-            ))}
+            ))} */}
           </div>
 
 
