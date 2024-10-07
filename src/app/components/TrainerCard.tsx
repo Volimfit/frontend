@@ -2,7 +2,6 @@ import {
   BreadcrumbItem,
   Breadcrumbs,
   Card,
-  Chip,
   Divider,
   Image
 } from '@nextui-org/react';
@@ -18,7 +17,7 @@ interface TrainerSlideProps {
   achievements: string[];
   imageSrc: string;
   roles: string[];
-  category:string
+  category: string
 }
 
 export default function TrainerCard({
@@ -44,13 +43,19 @@ export default function TrainerCard({
       <Card className='mb-4 bg-black'>
         <div className="block m-4 lg:hidden ">
           <h2 className="text-3xl text-white font-bold">{name}</h2>
-          <p className=" text-white/60  font-bold">{title}</p>
-         <div className='flex'>
-         <div className="text-white/90   font-bold">
+
+
+          {roles.map((role, index) => (
+            <p key={index} className=" text-white/60  font-bold">
+              {role} { index !== roles.length-1 ? "/" :null}
+            </p>
+          ))}
+          <div className='flex'>
+            <div className="text-white/90   font-bold">
             Категория:
           </div> <div className='ml-1'>{category}</div>
-         </div>
-         
+          </div>
+
         </div>
         <div className='flex flex-wrap justify-center'>
           <div className='flex-none '>
@@ -64,13 +69,20 @@ export default function TrainerCard({
 
           <div className=" p-4 flex-1  sm:min-w-[494px]" >
             <div className="hidden lg:block ">
-              <p className="text-2xl text-white/60 uppercase font-bold">{title}</p>
+              {roles.map((role, index) => (
+                <p key={index} className="text-2xl text-white/60 uppercase font-bold">
+                  {role} { index !== roles.length-1 ? "/" :null}
+                </p>
+              ))}
+
               <h2 className="text-3xl text-white font-bold">{name}</h2>
             </div>
             <Divider className='mb-4' />
-            <p className="text-2xl text-white/90   font-bold hidden lg:block ">
+           <div  className="hidden lg:block ">
+           <p className="text-2xl text-white/90   font-bold hidden lg:block ">
               Категория
             </p> <div className='mb-1'>{category}</div>
+           </div>
             <p className="text-2xl text-white/90   font-bold">
               Образование
             </p> <div className='mb-1'>{education}</div>
