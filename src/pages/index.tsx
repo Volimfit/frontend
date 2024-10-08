@@ -198,7 +198,7 @@ export default function Home() {
                        <CardBody className="overflow-visible p-0 z-0  justify-end ">
                           <CardHeader className="absolute bg-[#000000c4] z-20 flex-col !items-start min-h-[80px]">
                             <h4 className="text-white font-medium text-large">
-                              {item.name}
+                              {item.name.split(' ').map((el,index)=> <p key={index}>{el}</p>)}
                             </h4>
                           </CardHeader>
                           <Image
