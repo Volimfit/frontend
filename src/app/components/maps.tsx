@@ -26,7 +26,7 @@ export default function Maps() {
               iconColor: 'blue', // цвет иконки
             }}
             properties={{
-              iconContent: 'Volimfit', // пару символов помещается
+              iconContent: 'VOLIMFIT', // пару символов помещается
               hintContent: '<em>Подробнее</em>',
               balloonContent: `<div class="">
               <h4>Наш адрес</h4>
