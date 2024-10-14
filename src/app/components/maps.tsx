@@ -16,11 +16,11 @@ export default function Maps() {
           // включаем модули, отвечающие за всплывающие окна над геообъектами
           modules={['geoObject.addon.balloon', 'geoObject.addon.hint']}
           state={{
-            center: [55.653462, 37.626385], // координаты центра карты
+            center: [55.653335, 37.626985], // координаты центра карты
             zoom: 15,
           }}>
           <Placemark
-            geometry={[55.653462, 37.626385]}
+            geometry={[55.653335, 37.626985]}
             options={{
               preset: 'islands#nightStretchyIcon', // список темплейтов на сайте яндекса
               iconColor: 'blue', // цвет иконки
