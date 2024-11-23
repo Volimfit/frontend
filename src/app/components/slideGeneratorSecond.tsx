@@ -6,27 +6,11 @@ import Link from 'next/link';
 
 
 interface TrainerSlideProps {
-  name: string;
-  title: string;
-  education: string;
-  experience: string;
-  specializations: string[];
-  achievements: string[];
-  imageSrc: string;
-  roles: string[];
-  category: string
+ 
 }
 
 export default function SlideGeneratorSecond({
-  name,
-  title,
-  education,
-  experience,
-  specializations,
-  achievements,
-  imageSrc,
-  roles,
-  category
+
 }: TrainerSlideProps) {
 
 
