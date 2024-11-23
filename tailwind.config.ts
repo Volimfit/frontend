@@ -47,13 +47,13 @@ const config: Config = {
 
           colors: {
             background: '#000',
-            success: '#3bc9db',
+            success: '#00e4d9',
           },
         },
         dark: {
           // ...
           colors: {
-            success: '#3bc9db',
+            success: '#00e4d9',
             default: {
               500: '#ffffff',
             },

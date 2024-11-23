@@ -6,6 +6,8 @@ import MyForm from '@/app/components/form';
 import FadeInSection from '@/app/components/IntersectionObserver';
 import Layout from '@/app/components/layout';
 import Maps from '@/app/components/maps';
+import SlideGenerator from '@/app/components/slideGenerator';
+import SlideGeneratorSecond from '@/app/components/slideGeneratorSecond';
 import { trainers } from '@/app/data/constant';
 import { Divider } from '@nextui-org/divider';
 import { Button, Card, CardBody, CardFooter, CardHeader, Image } from '@nextui-org/react';
@@ -33,47 +35,17 @@ export default function Home() {
                 {
                   id: 1,
                   data: (
-                    <div className='relative w-full h-screen flex items-center justify-center'>
-                      <div
-                        className='absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-right-bottom md:bg-right-bottom'
-                        style={{ backgroundImage: `url(monya_app.png)` }}></div>
-                      <div className='absolute inset-0 w-full h-full bg-black bg-opacity-50 md:bg-opacity-50 bg-opacity-70'></div>
-                      <div className='relative z-10 text-center text-white'>
-                        <div className='flex flex-col items-center justify-center h-full'>
-                          <Image
-                            className='mt-4 w-64 md:w-72 lg:w-96 mb-20  md:mb-4'
-                            src='logo.png'
-                            alt='Logo'
-                          />
-                          <h2 className='text-success text-4xl md:text-6xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
-                            Скоро официальное открытие
-                          </h2>
-                          {/* <h2 className='text-2xl md:text-4xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
-                            Старт продаж с 20 июля
-                          </h2> */}
-
-                          <div className='flex flex-wrap justify-center items-center mb-4'>
-                            <div className='text-2xl md:text-4xl font-bold drop-shadow-lg'>
-                              Успей купить абонемент со
-                            </div>
-                            <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
-                              скидкой
-                            </div>
-                            {/* <div className='text-success text-2xl md:text-4xl font-bold ml-2 drop-shadow-lg'>
-                              50%
-                            </div> */}
-                          </div>
-                          <Button as={Link} color='success' className='mt-4' href='#form'>
-                            Оставить заявку
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
+                    <SlideGenerator/>
                   ),
                 },
-
                 {
                   id: 2,
+                  data: (
+                    <SlideGeneratorSecond/>
+                  ),
+                },
+                {
+                  id: 3,
                   data: (
                     <div className='relative w-full h-screen flex items-center justify-center'>
                       <div
@@ -231,7 +203,7 @@ export default function Home() {
                   backgroundRepeat: 'no-repeat',
 
                   backgroundAttachment: 'local',
-                  backgroundColor: '#3bc9db',
+                  backgroundColor: '#00e4d9',
                 }}>
                 <h4 className='text-2xl font-medium '>Присоединяйтесь к нам</h4>
                 <Divider className='bg-sky-950 mb-4 md:mb-0' />

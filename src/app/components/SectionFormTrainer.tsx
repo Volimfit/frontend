@@ -19,7 +19,7 @@ const SectionFormTrainer = ({
         backgroundRepeat: 'no-repeat',
 
         backgroundAttachment: 'local',
-        backgroundColor: '#3bc9db',
+        backgroundColor: '#00e4d9',
       }}>
       <h4 className='text-2xl font-medium '>Записаться на трениковку</h4>
       <Divider className='bg-sky-950 mb-4 md:mb-0' />
