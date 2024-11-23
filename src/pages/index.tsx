@@ -52,10 +52,10 @@ export default function Home() {
                         className='absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-right-bottom md:bg-right-bottom'
                         style={{ backgroundImage: `url(monya_app.png)` }}></div>
                       <div className='absolute inset-0 w-full h-full bg-black bg-opacity-50 md:bg-opacity-50 bg-opacity-70'></div>
-                      <div className='relative z-10 text-center text-white'>
-                        <div className='flex flex-col items-center justify-center h-full'>
+                      
+                        <div className='flex flex-col items-center  h-full z-10    justify-start  '>
                           <Image
-                            className=' w-64 md:w-72 lg:w-96  mb-20  md:mb-4'
+                            className='mt-20 w-64 md:w-72 lg:w-96  mb-40  md:mb-40'
                             src='logo.png'
                             alt='Logo'
                           />
@@ -116,7 +116,7 @@ export default function Home() {
                             Оставить заявку
                           </Button>
                         </div>
-                      </div>
+                     
                     </div>
                   ),
                 },
