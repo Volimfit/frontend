@@ -42,9 +42,9 @@ export default function SlideGenerator({
         </h2>
         {/* Кнопка */}
         <div className='mt-6'>
-        <Button as={Link} color='success' className='mt-4' href='#form'>
+        {/* <Button as={Link} color='success'  variant='ghost' className='mt-4' href='#form'>
           Оставить заявку
-        </Button>
+        </Button> */}
         </div>
       </div>
     </div>
