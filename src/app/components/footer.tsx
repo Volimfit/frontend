@@ -31,11 +31,18 @@ export default function Footer() {
             <p className='mb-4'>
               <a href='#section'>сб-вс c 9:00 до 22:00</a>
             </p>
-            <Divider className=''/>
-            <div className='mb-4 flex justify-center font-semibold  md:justify-start'>
-              
-              <a  target='_blank' href="./oferta.pdf">Публичная оферта</a>
+          
+            <div className='mb-4 flex justify-center flex-col  md:justify-start'>
+            <h6 className='  flex justify-center  font-semibold uppercase md:justify-start'>
+            Публичная оферта
+              </h6>
+              <Divider className='mt-2 mb-2'/>
+              <a  target='_blank' href="./several-condition.pdf">Общие условия</a>
+              <a  target='_blank' href="./several-condition-1.pdf">Заявление</a>
+              <a  target='_blank' href="./several-condition-2.pdf">Прейскурант</a>
+              <a  target='_blank' href="./several-condition-3.pdf">Правила клуба</a>
             </div>
+            
           </div>
 
           <div className='flex flex-col justify-center items-center sm:items-start  sm:justify-start'>
