@@ -21,7 +21,7 @@ export default function AboutCompany() {
         </div>
         <div className='md:w-1/2 '>
           <FadeCarousel
-            slides={Array.from(Array(10).keys())}
+            slides={Array.from(Array(17).keys())}
             options={{ loop: true, duration: 30 }}
           />
         </div>
