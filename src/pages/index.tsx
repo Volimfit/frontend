@@ -26,7 +26,10 @@ export default function Home() {
         <meta property="og:description" content="Тренировки для всей семьи в Москве! Присоединяйтесь к нашему фитнес-клубу и получите абонемент со скидкой!" />
         <meta property="og:url" content="https://volimfit.ru" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://volimfit.ru/logo.png" />
+        <meta property="og:image" content="https://volimfit.ru/logo-shared.png" />
+        <link rel="apple-touch-icon" sizes="300x300" href="https://volimfit.ru/logo-shared.png"></link>
+        <link rel="image_src" href="https://volimfit.ru/logo-shared.png"></link>
+        <link rel="icon" href="https://volimfit.ru/logo-shared.png"></link>
       </Head>
       <Layout>
         <main className='mb-auto '>
