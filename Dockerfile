@@ -1,5 +1,4 @@
-#Dockerfile
-
+# Use Node.js with Alpine base image
 FROM node:alpine
 
 # Set working directory
@@ -15,8 +14,11 @@ RUN npm install --global pm2
 # Copy all files
 COPY ./ ./
 
-# Build app
+# Build the app
 RUN npm run build
+
+# Ensure the `.next` cache directories exist and have correct permissions
+RUN mkdir -p /usr/app/.next/cache/images && chown -R node:node /usr/app/.next
 
 # Expose the listening port
 EXPOSE 3000
@@ -24,4 +26,5 @@ EXPOSE 3000
 # Run container as non-root user
 USER node
 
+# Start the application
 CMD [ "pm2-runtime", "npm", "--", "start" ]
