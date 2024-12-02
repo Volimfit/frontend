@@ -1,6 +1,7 @@
 'use client';
 
-import { Divider, Image } from '@nextui-org/react';
+import { Divider,  } from '@nextui-org/react';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -13,7 +14,7 @@ export default function Footer() {
           <div className=''>
             <h6 className='mb-4 flex items-center justify-center font-semibold uppercase md:justify-start'>
               <span className='me-3 [&>svg]:h-4 [&>svg]:w-4'>
-                <Image radius='none' src={'/logo_only.png'} alt='ff' width={100} />
+                <Image  src={'/logo_only.png'} alt='ff' width={100}   height={100}/>
               </span>
               VOLIMFIT
             </h6>
@@ -52,7 +53,7 @@ export default function Footer() {
             <div className='w-32 '>
               <div className='mb-4 flex items-center justify-start sm:items-start sm:justify-start'>
                 <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank'>
-                  <Image src={'/social/telegram.png'} alt='ff' width={30} radius='none' />{' '}
+                  <Image src={'/social/telegram.png'} alt='ff' width={30}   height={30} />{' '}
                 </a>
                 <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank' className='ml-2'>
                   Telegram
@@ -60,7 +61,7 @@ export default function Footer() {
               </div>
               <div className='mb-4 flex items-center justify-start sm:items-start sm:justify-start'>
                 <a href='https://taplink.cc/volimfit' target='_blank'>
-                  <Image src={'/social/taplink.png'} alt='ff' width={30} radius='none' />
+                  <Image src={'/social/taplink.png'} alt='ff' width={30}  height={30}  />
                 </a>
                 <a href='https://taplink.cc/volimfit' target='_blank' className='ml-2'>
                   Taplink
@@ -68,7 +69,7 @@ export default function Footer() {
               </div>
               <div className='mb-4 flex items-center justify-start  sm:items-start  sm:justify-start'>
                 <a href='https://wa.me/+79197742220' target='_blank'>
-                  <Image src={'/social/whatsapp.png'} alt='ff' width={30} radius='none' />
+                  <Image src={'/social/whatsapp.png'} alt='ff' width={30}  height={30}  />
                 </a>
                 <a href='https://wa.me/+79197742220' target='_blank' className='ml-2'>
                   WhatsApp

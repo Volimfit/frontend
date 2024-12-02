@@ -10,8 +10,9 @@ import SlideGenerator from '@/app/components/slideGenerator';
 import SlideGeneratorSecond from '@/app/components/slideGeneratorSecond';
 import { trainers } from '@/app/data/constant';
 import { Divider } from '@nextui-org/divider';
-import { Button, Card, CardBody, CardFooter, CardHeader, Image } from '@nextui-org/react';
+import { Button, Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
 import Head from 'next/head';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
@@ -48,17 +49,24 @@ export default function Home() {
                   id: 3,
                   data: (
                     <div className='relative w-full h-screen flex items-center justify-center'>
-                      <div
-                        className='absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-right-bottom md:bg-right-bottom'
-                        style={{ backgroundImage: `url(monya_app.png)` }}></div>
+                     
+                           <Image
+        src="/monya_app.png" // Убедитесь, что файл находится в папке public
+        alt="Фоновое изображение"
+        fill // Занимает весь контейнер
+        className="object-cover object-[right_0%_bottom_0%]" // Настраиваем позицию через Tailwind
+        sizes='100wv'
+      />
                       <div className='absolute inset-0 w-full h-full bg-black bg-opacity-50 md:bg-opacity-50 bg-opacity-70'></div>
                       
                         <div className='flex flex-col items-center  h-full z-10    justify-start  '>
-                          <Image
-                            className='mt-20 w-64 md:w-72 lg:w-96  mb-40  md:mb-40'
-                            src='logo.png'
-                            alt='Logo'
-                          />
+                        <Image
+  className="mt-20 w-64 md:w-72 lg:w-96 mb-40 md:mb-40"
+  src="/logo.png" // Путь к изображению (относительный путь из папки public)
+  alt="Logo"
+  width={384} // Ширина изображения (в пикселях, соответствует lg:w-96)
+  height={384} // Высота изображения (задайте реальную пропорцию вашего лого)
+/>
                           <h2 className='text-success text-4xl md:text-6xl font-bold mb-4 font-Montserrat drop-shadow-lg'>
                             Фитнес у дома
                           </h2>
@@ -67,28 +75,33 @@ export default function Home() {
                           </h2>
                           <div className='flex flex-wrap justify-center items-start mb-4 space-x-4'>
                             <div className='flex flex-col items-center'>
-                              <Image
-                                radius='none'
-                                src='/dumbbell.png'
-                                alt='Icon 2'
-                                className='w-7 md:w-16'
-                              />
+                            <Image
+  src="/dumbbell.png" // Путь к изображению в папке public
+  alt="Icon 2"
+  className="w-7 md:w-16"
+  width={64} // Ширина изображения (подберите реальную ширину, соответствует md:w-16)
+  height={64} // Высота изображения (сохраните пропорции)
+  style={{ borderRadius: '0px' }} // Заменяет `radius="none"` на inline-стиль
+/>
                               <p className='mt-2 text-xs md:text-xl'>
                                 Тренажерный <br /> зал
                               </p>
                             </div>
                             <div className='flex flex-col items-center'>
                               <Image
-                                radius='none'
+                               
                                 src='/martial-arts.png'
                                 alt='Icon 3'
+                                width={64} // Ширина изображения (подберите реальную ширину, соответствует md:w-16)
+                                height={64} // Высота изображения (сохраните пропорции)
                                 className='w-7 md:w-16'
                               />
                               <p className='mt-2  text-xs md:text-xl'>Единоборства</p>
                             </div>
                             <div className='flex flex-col items-center'>
                               <Image
-                                radius='none'
+                                width={64} // Ширина изображения (подберите реальную ширину, соответствует md:w-16)
+                                height={64} // Высота изображения (сохраните пропорции)
                                 src='/heart.png'
                                 alt='Icon 4'
                                 className='w-7 md:w-16'
@@ -98,7 +111,9 @@ export default function Home() {
 
                             <div className='flex flex-col items-center'>
                               <Image
-                                radius='none'
+                             
+                                width={64} // Ширина изображения (подберите реальную ширину, соответствует md:w-16)
+                                height={64} // Высота изображения (сохраните пропорции)
                                 src='/facial-treatment.png'
                                 alt='Icon 1'
                                 className='w-7 md:w-16'
@@ -148,52 +163,55 @@ export default function Home() {
               </div>
             </div>
             <FadeInSection>
-              <div className=' m-4' id='trainers'>
-                <h2 className='text-large font-medium'>
-                  Тренеры
-                </h2>
-                <Divider />
-
-              </div>
-              <div className='container mx-auto p-4 max-w-7xl'>
-                <div className="gap-6 grid grid-cols-2 sm:grid-cols-4">
-                  {trainers.map((item, index) => (
-                    <Link key={index} href={`/trainers/${item.link}`} className="mb-4">
-                      <Card
-                        shadow="sm"
-                        key={index}
-                        isPressable
-                        onPress={() => console.log("item pressed")}
-                        className="flex flex-col justify-between h-full"
-                      >
-                       <div>
-                       <CardBody className="overflow-visible p-0 z-0  justify-end ">
-                          <CardHeader className="absolute bg-[#000000c4] z-20 flex-col !items-start min-h-[80px]">
-                            <h4 className="text-white font-medium text-large">
-                              {item.name.split(' ').map((el,index)=> <p key={index}>{el}</p>)}
-                            </h4>
-                          </CardHeader>
-                          <Image
-                            shadow="sm"
-                            radius="lg"
-                            alt={item.title}
-                            className="w-full object-cover"
-                            src={item.imageSrc}
-                          />
-                        </CardBody>
-                       </div>
-                        <CardFooter className="flex-col content-start items-start flex-grow min-h-[40px]">
-                          <p className="text-default-500 text-left">
-                            {item.title}
-                          </p>
-                        </CardFooter>
-                      </Card>
-                    </Link>
-                  ))}
+  <div className="m-4" id="trainers">
+    <h2 className="text-large font-medium">Тренеры</h2>
+    <Divider />
+  </div>
+  <div className="container mx-auto p-4 max-w-7xl">
+    <div className="gap-6 grid grid-cols-2 sm:grid-cols-4">
+      {trainers.map((item, index) => (
+        <Link
+          key={index}
+          href={`/trainers/${item.link}`}
+          className="mb-4 "
+        >
+          <Card
+            shadow="sm"
+            isPressable
+            className="flex flex-col justify-between h-full w-full"
+          >
+           
+              <CardBody className="overflow-visible p-0 z-0 flex-none justify-end  ">
+                {/* Заголовок на изображении */}
+                <CardHeader className="absolute bg-[#000000c4] z-20 flex-col items-start min-h-[80px] ">
+                  <h4 className="text-white font-medium text-large">
+                    {item.name.split(" ").map((el, i) => (
+                      <p key={i}>{el}</p>
+                    ))}
+                  </h4>
+                </CardHeader>
+                {/* Исправленный блок с изображением */}
+                <div className="relative w-full aspect-[3398/5097]">
+                  <Image
+                    src={item.imageSrc} // Динамический путь изображения
+                    alt={item.title} // Альтернативный текст
+                    fill // Автоматическая адаптация под размер контейнера
+                    className="object-cover rounded-lg"
+                      sizes="(max-width: 640px) 50vw, 25vw"
+                  />
                 </div>
-
-              </div>
-            </FadeInSection>
+              </CardBody>
+           
+            {/* Подвал карточки */}
+            <CardFooter className="flex-col content-start items-start flex-grow min-h-[40px]">
+              <p className="text-default-500 text-left">{item.title}</p>
+            </CardFooter>
+          </Card>
+        </Link>
+      ))}
+    </div>
+  </div>
+</FadeInSection>
             <div className='min-h-96   inset-0 w-full h-full     '>
               <div
                 className='min-h-32 md:min-h-48 container mx-auto max-w-7xl  p-4  animate-wave rounded-lg'

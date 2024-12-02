@@ -3,8 +3,9 @@ import Layout from "@/app/components/layout";
 import Maps from "@/app/components/maps";
 import SectionForm from "@/app/components/SectionForm";
 import { trainers } from "@/app/data/constant";
-import { BreadcrumbItem, Breadcrumbs, Card, CardBody, CardFooter, CardHeader, Image } from "@nextui-org/react";
+import { BreadcrumbItem, Breadcrumbs, Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 
 
@@ -46,36 +47,42 @@ const TrainersPage = ({ }) => {
 
             </Breadcrumbs>
             <div className="gap-6 grid grid-cols-2 sm:grid-cols-4">
-
               {trainers.map((item, index) => (
-                <Link key={index} href={`/trainers/${item.link}`} className="mb-4">
+                <Link
+                  key={index}
+                  href={`/trainers/${item.link}`}
+                  className="mb-4 "
+                >
                   <Card
                     shadow="sm"
-                    key={index}
                     isPressable
-                    onPress={() => console.log("item pressed")}
-                    className="flex flex-col justify-between h-full"
+                    className="flex flex-col justify-between h-full w-full"
                   >
-                    <div>
-                      <CardBody className="overflow-visible p-0 z-0  justify-end ">
-                        <CardHeader className="absolute bg-[#000000c4] z-20 flex-col !items-start min-h-[80px]">
-                          <h4 className="text-white font-medium text-large">
-                          {item.name.split(' ').map((el,index)=> <p key={index}>{el}</p>)}
-                          </h4>
-                        </CardHeader>
+
+                    <CardBody className="overflow-visible p-0 z-0 flex-none justify-end  ">
+                      {/* Заголовок на изображении */}
+                      <CardHeader className="absolute bg-[#000000c4] z-20 flex-col items-start min-h-[80px] ">
+                        <h4 className="text-white font-medium text-large">
+                          {item.name.split(" ").map((el, i) => (
+                            <p key={i}>{el}</p>
+                          ))}
+                        </h4>
+                      </CardHeader>
+                      {/* Исправленный блок с изображением */}
+                      <div className="relative w-full aspect-[3398/5097]">
                         <Image
-                          shadow="sm"
-                          radius="lg"
-                          alt={item.title}
-                          className="w-full object-cover"
-                          src={item.imageSrc}
+                          src={item.imageSrc} // Динамический путь изображения
+                          alt={item.title} // Альтернативный текст
+                          fill // Автоматическая адаптация под размер контейнера
+                          className="object-cover rounded-lg"
+                          sizes="(max-width: 640px) 50vw, 25vw"
                         />
-                      </CardBody>
-                    </div>
+                      </div>
+                    </CardBody>
+
+                    {/* Подвал карточки */}
                     <CardFooter className="flex-col content-start items-start flex-grow min-h-[40px]">
-                      <p className="text-default-500 text-left">
-                        {item.title}
-                      </p>
+                      <p className="text-default-500 text-left">{item.title}</p>
                     </CardFooter>
                   </Card>
                 </Link>

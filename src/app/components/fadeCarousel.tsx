@@ -1,10 +1,11 @@
-import { Image } from '@nextui-org/react';
+
 import { EmblaOptionsType } from 'embla-carousel';
 import Fade from 'embla-carousel-fade';
 import useEmblaCarousel from 'embla-carousel-react';
 import React from 'react';
 import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons';
 import { DotButton, useDotButton } from './EmblaCarouselDotButton';
+import Image from 'next/image';
 
 type PropType = {
   slides: number[];
@@ -26,13 +27,16 @@ const FadeCarousel: React.FC<PropType> = (props) => {
         <div className='embla__container1'>
           {slides.map((index) => (
             <div className='embla__slide1' key={index}>
-              <Image
-                className='embla__slide__img1'
-                width='100%'
-                height='auto'
-                src={'/slider-' + index + '.jpg'}
-                alt='Your alt text'
-              />
+              <div className="relative w-full aspect-[3902/2190]">
+                <Image
+                  className="embla__slide__img1 object-cover"
+                  src={`/slider-${index}.jpg`} 
+                  alt={`Slide ${index}`}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  priority={index === 0} 
+                />
+              </div>
             </div>
           ))}
         </div>
