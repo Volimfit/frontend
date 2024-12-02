@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer
       className=' text-center text-surface-75 dark:text-white-75 lg:text-left'
-      id='contact'>
+      >
       <Divider />
       <div className='mx-6 py-5 text-center md:text-left'>
         <div className='grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4'>
@@ -78,7 +78,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
+          <div id='contact'>
             <h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
               Контакты
             </h6>
