@@ -45,7 +45,7 @@ export const trainers = [
     ],
     imageSrc: "/trainer_2.jpg",
     roles: ["Персональный тренер", "Тренер групповых программ"],
-      category:"Мастер-тренер"
+      category:"Элит-тренер"
   },
   {
     id: 3,
