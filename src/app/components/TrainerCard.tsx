@@ -63,9 +63,11 @@ export default function TrainerCard({
               <Image
                 src={imageSrc} 
                 alt={`${name}'s image`}
-                fill
+                
                 className="object-cover"
-                sizes="(max-height: 800px) 100vw, 800px"
+                width={500}
+                height={372}
+                style={{ width: '100%', height: 'auto' }}
                 priority
               />
             </div>
