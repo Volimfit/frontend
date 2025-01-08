@@ -16,6 +16,7 @@ export default function Footer() {
               <span className='me-3 [&>svg]:h-4 [&>svg]:w-4'>
                 <Image  src={'/logo_only.png'} alt='ff' width={100}   height={100}/>
               </span>
+              
               VOLIMFIT
             </h6>
             <span>Фитнес-клуб, где каждая деталь продумана до мелочей!</span>
