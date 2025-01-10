@@ -25,6 +25,7 @@ const MonyaPage = () => {
         <meta property="og:image" content={`https://volimfit.ru/${data.imageSrc}`} />
       </Head>
       <Layout>
+        
         <FadeInSection>
           <TrainerCard
             {...data} />
