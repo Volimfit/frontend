@@ -58,7 +58,7 @@ export default function Home() {
         alt="Фоновое изображение"
         fill // Занимает весь контейнер
         className="object-cover object-[right_0%_bottom_0%]" // Настраиваем позицию через Tailwind
-        sizes='100wv'
+        sizes='100vw'
       />
                       <div className='absolute inset-0 w-full h-full bg-black bg-opacity-50 md:bg-opacity-50 bg-opacity-70'></div>
                       
@@ -199,8 +199,9 @@ export default function Home() {
                     src={item.imageSrc} // Динамический путь изображения
                     alt={item.title} // Альтернативный текст
                     fill // Автоматическая адаптация под размер контейнера
+                    priority
                     className="object-cover rounded-lg"
-                      sizes="(max-width: 640px) 50vw, 25vw"
+                      sizes="25vw"
                   />
                 </div>
               </CardBody>

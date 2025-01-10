@@ -12,15 +12,17 @@ export default function SlideGenerator({}: TrainerSlideProps) {
         src="/gantelya.jpg" // Убедитесь, что файл находится в папке public
         alt="Фоновое изображение"
         fill // Занимает весь контейнер
+        priority
         className="object-cover object-[right_35%_bottom_45%] hidden md:block" // Настраиваем позицию через Tailwind
-        sizes='100wv'
+        sizes='100vw'
       />
       <Image
               src="/gantelya-mob.png" // Убедитесь, что файл находится в папке public
               alt="Фоновое изображение"
               fill // Занимает весь контейнер
+              priority
               className="object-cover object-[right_35%_bottom_45%] block md:hidden" // Настраиваем позицию через Tailwind
-              sizes='100wv'
+              sizes='100vw'
             />
       {/* Затемнение */}
       <div className="absolute inset-0 w-full h-full bg-black bg-opacity-50"></div>

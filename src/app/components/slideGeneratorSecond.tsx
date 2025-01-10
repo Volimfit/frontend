@@ -1,9 +1,7 @@
 import {
-  Button,
   Divider
 } from '@nextui-org/react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 
 interface TrainerSlideProps {
@@ -25,7 +23,7 @@ export default function SlideGeneratorSecond({
         fill // Занимает весь контейнер
         className="object-cover object-[right_45%_bottom_50%] hidden md:block" // Настраиваем позицию через Tailwind
        
-        sizes='100wv'
+        sizes='100vw'
       />
 
 <Image
@@ -33,7 +31,7 @@ export default function SlideGeneratorSecond({
         alt="Фоновое изображение"
         fill // Занимает весь контейнер
         className="object-cover object-[right_45%_bottom_50%] block md:hidden" // Настраиваем позицию через Tailwind
-        sizes='100wv'
+        sizes='100vw'
       />
 
       {/* Затемнение */}
