@@ -27,4 +27,4 @@ EXPOSE 3000
 USER node
 
 # Start the application
-CMD [ "pm2-runtime", "npm", "--", "start" ]
+CMD [ "pm2-runtime", "npm", "--", "start", "--max_old_space_size=512" ]

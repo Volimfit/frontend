@@ -9,9 +9,15 @@ services:
     environment:
       - NODE_ENV=production
       - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
-volumes:
+    deploy:
+      resources:
+        limits:
+          memory: 1.5G
+          cpus: "0.8"
+        reservations:
+          memory: 1G
+          cpus: "0.5"
+    volumes:
       - image_cache:/usr/app/.next/cache/images
 volumes:
   image_cache:
-    
-
