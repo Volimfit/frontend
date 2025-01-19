@@ -22,7 +22,7 @@ jobs:
       - name: Docker Build image
         run: |
           echo "Build Started..."
-          docker build --pull --rm -f "Dockerfile" -t volimfit-frontend:latest "." --memory=1.5g --cpus=0.8
+          docker build --pull --rm -f "Dockerfile" -t volimfit-frontend:latest "."
 
       - name: Docker Compose
         run: |
