@@ -1,4 +1,3 @@
-version: '3'
 services:
   frontend:
     hostname: frontend
@@ -10,3 +9,9 @@ services:
     environment:
       - NODE_ENV=production
       - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
+volumes:
+      - image_cache:/usr/app/.next/cache/images
+volumes:
+  image_cache:
+    
+
