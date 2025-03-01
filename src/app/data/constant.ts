@@ -68,7 +68,8 @@ export const trainers = [
       "Сертифицированный тренер Института Пилатеса (2007)",
       "Сертифицированный мастер-тренер FPA (2006)",
       "Сертифицированный тренер по бодибилдингу и фитнесу FPA (2004)",
-      "Сертификат «Традиционный тайский массаж: СПА-мастер»"
+      "Сертификат «Традиционный тайский массаж: СПА-мастер»",
+      "Сертификат «БОДИ БАЛЕТ. Методика преподавания в фитнес-клубе и студии». Школа фитнес-тренеров FITNESS EXPRESS"
     ],
     imageSrc: "/trainer_3.jpg",
     roles: ["Персональный тренер", "Тренер групповых программ",],
@@ -241,6 +242,30 @@ export const trainers = [
     imageSrc: "/trainer_10.jpg",
     roles: ["Персональный тренер",'Массажист','Кинезиолог'],
        category:"Тренер/массажист"
+  },
+  {
+    id: 11,
+    link: "radchenko",
+    name: "Мария Радченко",
+    title: "Персональный тренер / Тренер групповых программ",
+    education: "",
+    experience: "16 лет",
+    specializations: [
+      "Функциональный и силовой тренинг",
+      "Реабилитация после травм",
+      "Детские группы (HIPHOP, HOUSE, танцевальная акробатика)",
+      "Взрослые группы (HIGH HEELS, STRIP, TWERK, HIPHOP, HOUSE)",
+      "Подготовка к батлам и соревнованиям"
+    ],
+    achievements: [
+      "«Face to face» номинация seven two smoke 1место HIPHOP",
+      "Toп 10 “frame up команды 2016 lady show”",
+      'Третий сезон «ТАНЦЫ НА ТНТ» топ 50',
+      'Обучение у мировых танцоров и у основателей стилей:Salas, Legion X, Popping, Франция. Djidawi, Legion X, Popping, Франция. Bruce Ykandji, Popping, Франция. Nelson, Popping, Франция. Loose Joint, Elite Fors, Hip-Hop, USA. Henry Link, Elite Fors, Hip-Hop, USA. Adnan Sigh. Н, Германия. UK, Bad Newz Mp, Hip-Нор, Германия. Ben, Newz Mp, Hip-Hop, Германия. Marvin, Hip-Hop, Франция. Lando Wilkins, Hip-Hop, USA. Physs, Hip-Hop/House, Франция. Byron Cox, The House Dancer Project, House. Hideki, House, Япония. Rabah, O`Trip House, Франция. Marjory Smarth, Dance Fusion, USA. Didier, O`Trip House, Франция. Mamson, House, Франция. Babson, House, Франция. Sousson, Experimental Dance, Франция',
+    ],
+    imageSrc: "/trainer_11.jpg",
+    roles: ["Персональный тренер",'Тренер групповых программ '],
+       category:"Мастер-тренер"
   }
 ];
 export const findTrainerByLink=(link:string)=> {

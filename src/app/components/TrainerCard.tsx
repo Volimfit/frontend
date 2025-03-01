@@ -92,8 +92,10 @@ export default function TrainerCard({
               </p>
               <div className="mb-1">{category}</div>
             </div>
-            <p className="text-2xl text-white/90 font-bold">Образование</p>
-            <div className="mb-1">{education}</div>
+             {
+              education && <><p className="text-2xl text-white/90 font-bold">Образование</p>
+            <div className="mb-1">{education}</div></>
+             }
 
             <p className="text-2xl font-bold">Опыт работы</p>
             <div className="mb-1">{experience}</div>
