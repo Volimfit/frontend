@@ -248,7 +248,7 @@ export const trainers = [
     link: "radchenko",
     name: "Мария Радченко",
     title: "Персональный тренер / Тренер групповых программ",
-    education: "",
+    education: "Высшее хореографическое (СПбГУп)",
     experience: "16 лет",
     specializations: [
       "Функциональный и силовой тренинг",
