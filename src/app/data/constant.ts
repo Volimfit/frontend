@@ -19,7 +19,7 @@ export const trainers = [
     ],
     imageSrc: '/trainer_1.jpg',
     roles: ['Основатель фитнес-клуба VOLIMFIT', 'Персональный тренер', 'Тренер групповых программ'],
-    category: 'Элит-тренер',
+    category: 'ЭлитPRO-тренер',
   },
   {
     id: 2,
@@ -150,7 +150,7 @@ export const trainers = [
     ],
     imageSrc: '/trainer_7.jpg',
     roles: ['Персональный тренер', 'Тренер групповых программ'],
-    category: 'Тренер',
+    category: 'Мастер-тренер',
   },
   {
     id: 8,
