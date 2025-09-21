@@ -22,7 +22,7 @@ export default function Home() {
         <title>VOLIMFIT - Фитнес-клуб у дома</title>
         <meta
           name='description'
-          content='Фитнес-клуб, где каждая деталь продумана до мелочей. Тренировки для всей семьи в Москве!'
+          content='Семейный фитнес-клуб, где каждый достигает целей! . Тренировки для всей семьи в Москве!'
         />
         <meta
           name='keywords'

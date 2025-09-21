@@ -19,7 +19,7 @@ export default function Footer() {
               
               VOLIMFIT
             </h6>
-            <span>Фитнес-клуб, где каждая деталь продумана до мелочей!</span>
+            <span>Семейный фитнес-клуб, где каждый достигает целей!</span>
           </div>
 
           <div>
