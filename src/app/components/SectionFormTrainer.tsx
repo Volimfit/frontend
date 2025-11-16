@@ -21,7 +21,7 @@ const SectionFormTrainer = ({
         backgroundAttachment: 'local',
         backgroundColor: '#00e4d9',
       }}>
-      <h4 className='text-2xl font-medium '>Записаться на трениковку</h4>
+      <h4 className='text-2xl font-medium '>Записаться на тренировку</h4>
       <Divider className='bg-sky-950 mb-4 md:mb-0' />
       <p className='text-large text-default-500'>
       Оставьте заявку и наш менеджер свяжется с Вами
