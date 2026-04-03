@@ -54,7 +54,7 @@ export default function Footer() {
             <div className='w-32 '>
               <div className='mb-4 flex items-center justify-start sm:items-start sm:justify-start'>
                 <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank'>
-                  <Image src={'/social/telegram.png'} alt='ff' width={30}   height={30} />{' '}
+                  <Image src={'/social/telegram.png'} alt='ff' width={30} height={30} unoptimized />{' '}
                 </a>
                 <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank' className='ml-2'>
                   Telegram
@@ -62,7 +62,7 @@ export default function Footer() {
               </div>
               <div className='mb-4 flex items-center justify-start sm:items-start sm:justify-start'>
                 <a href='https://taplink.cc/volimfit' target='_blank'>
-                  <Image src={'/social/taplink.png'} alt='ff' width={30}  height={30}  />
+                  <Image src={'/social/taplink.png'} alt='ff' width={30} height={30} unoptimized />
                 </a>
                 <a href='https://taplink.cc/volimfit' target='_blank' className='ml-2'>
                   Taplink
@@ -70,7 +70,7 @@ export default function Footer() {
               </div>
               <div className='mb-4 flex items-center justify-start  sm:items-start  sm:justify-start'>
                 <a href='https://wa.me/+79197742220' target='_blank'>
-                  <Image src={'/social/whatsapp.png'} alt='ff' width={30}  height={30}  />
+                  <Image src={'/social/whatsapp.png'} alt='ff' width={30} height={30} unoptimized />
                 </a>
                 <a href='https://wa.me/+79197742220' target='_blank' className='ml-2'>
                   WhatsApp
