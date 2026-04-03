@@ -11,7 +11,7 @@ export default function MyForm() {
   const [finish, setFinished] = useState(false);
   const [isLoading, setLoading] = useState(false); // Состояние для отслеживания загрузки
   const [isInvalid, setIsInvalid] = useState(false); // Состояние для отслеживания ошибки
-  const [recaptchaValue, setRecaptchaValue] = useState(null); // Состояние для reCAPTCHA
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null); // Состояние для reCAPTCHA
   const {
     register,
     handleSubmit,
@@ -36,23 +36,19 @@ export default function MyForm() {
         recaptcha: recaptchaValue,
       };
 
-      await fetch(url, {
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(body),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-          }
-          return response.json();
-        })
-        .then((data) => {})
-        .catch((error) => {
-          console.error('There was a problem with the fetch operation:', error);
-        });
+      });
+
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+
+      await response.json();
       // Можно добавить имитацию задержки для тестирования
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
@@ -117,9 +113,9 @@ export default function MyForm() {
       <ReCAPTCHAComponent
         className=' pt-5 sm:pt-10  pb-5 sm:pb-10'
         sitekey={`${
-          process.env.RECAPTCHA_SECRET_KEY || '6LeHuwwqAAAAAHvZD1LBGHyN9cogqSUoDTSsvfk8'
+          process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LeHuwwqAAAAAHvZD1LBGHyN9cogqSUoDTSsvfk8'
         }`} // Замените на ваш site key
-        onChange={(value: any) => setRecaptchaValue(value)}
+        onChange={(value: string | null) => setRecaptchaValue(value)}
       />
 
       <Button

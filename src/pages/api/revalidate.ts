@@ -4,10 +4,11 @@ import { getAllTrainerSlugs } from '@/lib/trainers';
 const REVALIDATE_SECRET = process.env.REVALIDATE_SECRET || '';
 
 function getSecret(req: NextApiRequest): string {
+  const headerSecret = typeof req.headers['x-revalidate-secret'] === 'string' ? req.headers['x-revalidate-secret'] : '';
   const querySecret = typeof req.query.secret === 'string' ? req.query.secret : '';
   const bodySecret = typeof req.body?.secret === 'string' ? req.body.secret : '';
 
-  return querySecret || bodySecret;
+  return headerSecret || querySecret || bodySecret;
 }
 
 function isTrainersCollection(req: NextApiRequest): boolean {

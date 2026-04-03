@@ -122,8 +122,8 @@ export default function Activity() {
       <Tab key='photos' title='Групповые занятия ' className='text-white/50'>
         <div className=' flex items-center justify-center'>
           <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl'>
-            {adultActivities.map((activity, index) => (
-              <Card shadow='sm' key={index} isPressable onPress={() => console.log(activity.title)}>
+            {adultActivities.map((activity) => (
+              <Card shadow='sm' key={`adult-${activity.title}`} isPressable>
                 <CardBody className='overflow-visible p-0'>
                   <Image
                     shadow='sm'
@@ -148,8 +148,8 @@ export default function Activity() {
       <Tab key='music' title='Занятия для детей'>
         <div className=' flex items-center justify-center'>
           <div className='gap-2 grid grid-cols-2 sm:grid-cols-4 max-w-screen-2xl '>
-            {kidsActivities.map((activity, index) => (
-              <Card shadow='sm' key={index} isPressable onPress={() => console.log(activity.title)}>
+            {kidsActivities.map((activity) => (
+              <Card shadow='sm' key={`kids-${activity.title}`} isPressable>
                 <CardBody className='overflow-visible p-0 '>
                   <Image
                     shadow='sm'

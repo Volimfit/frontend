@@ -179,8 +179,8 @@ export default function Home({ trainers }: HomeProps) {
               </div>
               <div className='container mx-auto p-4 max-w-7xl'>
                 <div className='gap-6 grid grid-cols-2 sm:grid-cols-4'>
-                  {trainers.map((item, index) => (
-                    <Link key={index} href={`/trainers/${item.link}`} className='mb-4 '>
+                  {trainers.map((item) => (
+                    <Link key={item.link} href={`/trainers/${item.link}`} className='mb-4 '>
                       <Card
                         shadow='sm'
                         isPressable
@@ -200,7 +200,6 @@ export default function Home({ trainers }: HomeProps) {
                               src={item.imageSrc} // Динамический путь изображения
                               alt={item.title} // Альтернативный текст
                               fill // Автоматическая адаптация под размер контейнера
-                              priority
                               className='object-cover rounded-lg'
                               sizes='25vw'
                             />

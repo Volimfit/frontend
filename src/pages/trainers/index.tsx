@@ -52,9 +52,9 @@ const TrainersPage = ({ trainers }: TrainersPageProps) => {
 
             </Breadcrumbs>
             <div className="gap-6 grid grid-cols-2 sm:grid-cols-4">
-              {trainers.map((item, index) => (
+              {trainers.map((item) => (
                 <Link
-                  key={index}
+                  key={item.link}
                   href={`/trainers/${item.link}`}
                   className="mb-4 "
                 >

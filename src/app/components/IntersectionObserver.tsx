@@ -9,13 +9,16 @@ export default function FadeInSection({ children }: FadeInSectionProps) {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    const node = ref.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           if (ref.current) {
             ref.current.classList.add('animate-fadeIn');
           }
-          observer.unobserve(ref.current!);
+          if (node) {
+            observer.unobserve(node);
+          }
         }
       },
       {
@@ -24,13 +27,13 @@ export default function FadeInSection({ children }: FadeInSectionProps) {
       },
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
   }, []);
