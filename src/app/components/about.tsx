@@ -49,7 +49,7 @@ export default function AboutCompany() {
 
                 <li className='flex flex-col'>
                   <span className='font-semibold text-default-800 text-lg'>
-                     Зал групповых программ
+                    Зал групповых программ
                   </span>
                   <span className='text-default-600 mt-1'>
                     Функциональные тренировки, растяжка и другие направления под руководством
@@ -58,9 +58,7 @@ export default function AboutCompany() {
                 </li>
 
                 <li className='flex flex-col'>
-                  <span className='font-semibold text-default-800 text-lg'>
-                     Массажный кабинет
-                  </span>
+                  <span className='font-semibold text-default-800 text-lg'>Массажный кабинет</span>
                   <span className='text-default-600 mt-1'>
                     Зона восстановления и релаксации — идеальное завершение продуктивной тренировки.
                   </span>
