@@ -26,14 +26,14 @@ export default function MyForm() {
 
     try {
       // Ваш код для отправки данных на сервер
-      console.log(data);
+
       // http://109.172.114.125:8111
       const url = 'https://api.volimfit.ru/mail/send-email';
       const body = {
         number: data.phone,
         recaptcha: recaptchaValue,
       };
-      console.log(JSON.stringify(body));
+
       await fetch(url, {
         method: 'POST',
         headers: {
@@ -47,9 +47,7 @@ export default function MyForm() {
           }
           return response.json();
         })
-        .then((data) => {
-          console.log('Success:', data);
-        })
+        .then((data) => {})
         .catch((error) => {
           console.error('There was a problem with the fetch operation:', error);
         });

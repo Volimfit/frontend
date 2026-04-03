@@ -6,14 +6,8 @@ import Privacy from './privacy';
 
 interface FormTrainerProps {
   name?: string;
-
-
 }
-export default function FormTrainer(
-  {
-    name,
-  }: FormTrainerProps
-) {
+export default function FormTrainer({ name }: FormTrainerProps) {
   const [first, setFirst] = useState('+7');
   const [finish, setFinished] = useState(false);
   const [isLoading, setLoading] = useState(false); // Состояние для отслеживания загрузки
@@ -35,7 +29,7 @@ export default function FormTrainer(
 
     try {
       // Ваш код для отправки данных на сервер
-      
+
       // http://109.172.114.125:8111
       const url = 'https://api.volimfit.ru/mail/send-email-trainer';
       const body = {
@@ -43,7 +37,7 @@ export default function FormTrainer(
         name: name,
         recaptcha: recaptchaValue,
       };
-      console.log(JSON.stringify(body));
+
       await fetch(url, {
         method: 'POST',
         headers: {
@@ -57,9 +51,7 @@ export default function FormTrainer(
           }
           return response.json();
         })
-        .then((data) => {
-          console.log('Success:', data);
-        })
+        .then((data) => {})
         .catch((error) => {
           console.error('There was a problem with the fetch operation:', error);
         });
@@ -126,8 +118,9 @@ export default function FormTrainer(
       <Privacy />
       <ReCAPTCHA
         className=' pt-5 sm:pt-10  pb-5 sm:pb-10'
-        sitekey={`${process.env.RECAPTCHA_SECRET_KEY || '6LeHuwwqAAAAAHvZD1LBGHyN9cogqSUoDTSsvfk8'
-          }`} // Замените на ваш site key
+        sitekey={`${
+          process.env.RECAPTCHA_SECRET_KEY || '6LeHuwwqAAAAAHvZD1LBGHyN9cogqSUoDTSsvfk8'
+        }`} // Замените на ваш site key
         onChange={(value: any) => setRecaptchaValue(value)}
       />
 

@@ -14,7 +14,7 @@ export default function Footer() {
           <div className=''>
             <h6 className='mb-4 flex items-center justify-center font-semibold uppercase md:justify-start'>
               <span className='me-3 [&>svg]:h-4 [&>svg]:w-4'>
-                <Image  src={'/logo_only.png'} alt='ff' width={100}   height={100}/>
+                <Image src={'/logo_only.png'} alt='ff' width={100} height={100} style={{ height: 'auto' }} />
               </span>
               
               VOLIMFIT

@@ -22,7 +22,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
 
   useEffect(() => {
     const autoplay = emblaApi?.plugins()?.autoplay;
-    console.log('autoplay', autoplay);
+
     if (!autoplay) return;
 
     setIsPlaying(autoplay.isPlaying());

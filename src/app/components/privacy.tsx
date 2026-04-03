@@ -14,7 +14,7 @@ export default function Privacy() {
 
   return (
     <>
-      <Link color='success' onClick={onOpen}>
+      <Link color='success' onPress={onOpen}>
         Политика конфиденциальности
       </Link>
       <Modal

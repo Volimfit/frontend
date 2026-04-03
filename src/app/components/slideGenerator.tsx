@@ -1,4 +1,4 @@
-import { Button, Divider } from '@nextui-org/react';
+﻿import { Button, Divider } from '@nextui-org/react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -14,7 +14,7 @@ export default function SlideGenerator({}: TrainerSlideProps) {
         fill // Занимает весь контейнер
         priority
         className="object-cover object-[right_35%_bottom_45%] hidden md:block" // Настраиваем позицию через Tailwind
-        sizes='100vw'
+        sizes='(min-width: 768px) 100vw, 0px'
       />
       <Image
               src="/gantelya-mob.png" // Убедитесь, что файл находится в папке public
@@ -22,7 +22,7 @@ export default function SlideGenerator({}: TrainerSlideProps) {
               fill // Занимает весь контейнер
               priority
               className="object-cover object-[right_35%_bottom_45%] block md:hidden" // Настраиваем позицию через Tailwind
-              sizes='100vw'
+              sizes='(max-width: 767px) 100vw, 0px'
             />
       {/* Затемнение */}
       <div className="absolute inset-0 w-full h-full bg-black bg-opacity-50"></div>
@@ -47,3 +47,6 @@ export default function SlideGenerator({}: TrainerSlideProps) {
     </div>
   );
 }
+
+
+
