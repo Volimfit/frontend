@@ -67,8 +67,6 @@ function normalizeTrainer(trainer) {
     specializations: trainer.specializations.join('\n'),
     achievements: trainer.achievements.join('\n'),
     roles: trainer.roles.join('\n'),
-    image_url: `https://volimfit.ru${trainer.imageSrc}`,
-    source_url: `https://volimfit.ru/trainers/${trainer.link}`,
   };
 }
 
@@ -154,8 +152,6 @@ async function ensureCollection(token) {
         textField('specializations'),
         textField('achievements'),
         textField('roles'),
-        textField('image_url'),
-        textField('source_url'),
       ],
     }),
   });

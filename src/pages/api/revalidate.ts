@@ -2,6 +2,7 @@
 import { getAllTrainerSlugs } from '@/lib/trainers';
 
 const REVALIDATE_SECRET = process.env.REVALIDATE_SECRET || '';
+const SUPPORTED_COLLECTIONS = new Set(['trainers', 'public_offer_files']);
 
 function getSecret(req: NextApiRequest): string {
   const headerSecret = typeof req.headers['x-revalidate-secret'] === 'string' ? req.headers['x-revalidate-secret'] : '';
@@ -11,12 +12,14 @@ function getSecret(req: NextApiRequest): string {
   return headerSecret || querySecret || bodySecret;
 }
 
-function isTrainersCollection(req: NextApiRequest): boolean {
+function getCollection(req: NextApiRequest): string {
   const queryCollection = typeof req.query.collection === 'string' ? req.query.collection : '';
   const bodyCollection = typeof req.body?.collection === 'string' ? req.body.collection : '';
-  const collection = queryCollection || bodyCollection;
+  return queryCollection || bodyCollection || 'trainers';
+}
 
-  return !collection || collection === 'trainers';
+function isSupportedCollection(collection: string): boolean {
+  return SUPPORTED_COLLECTIONS.has(collection);
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -32,8 +35,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(401).json({ message: 'Invalid secret' });
   }
 
-  if (!isTrainersCollection(req)) {
-    return res.status(200).json({ revalidated: false, message: 'Collection is ignored' });
+  const collection = getCollection(req);
+
+  if (!isSupportedCollection(collection)) {
+    return res.status(400).json({
+      revalidated: false,
+      message: `Unsupported collection: ${collection}`,
+      supported: Array.from(SUPPORTED_COLLECTIONS),
+    });
   }
 
   try {
@@ -44,6 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({
       revalidated: true,
+      collection,
       paths: pagesToRevalidate,
       timestamp: new Date().toISOString(),
     });

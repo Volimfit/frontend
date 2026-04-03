@@ -27,7 +27,6 @@ interface PocketBaseTrainerRecord {
   specializations?: string;
   achievements?: string;
   roles?: string;
-  image_url?: string;
   photo?: string | string[];
 }
 
@@ -63,10 +62,6 @@ function buildTrainerImageUrl(record: PocketBaseTrainerRecord): string {
   if (fileName) {
     const version = record.updated ? `?v=${encodeURIComponent(record.updated)}` : '';
     return `${PB_URL}/api/files/${record.collectionId}/${record.id}/${fileName}${version}`;
-  }
-
-  if (record.image_url) {
-    return record.image_url;
   }
 
   return '/trainer_1.jpg';
