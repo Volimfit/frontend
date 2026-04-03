@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import AboutCompany from '@/app/components/about';
 import Activity from '@/app/components/activity';
 import EmblaCarousel from '@/app/components/emblaCarousel';
@@ -8,14 +8,19 @@ import Layout from '@/app/components/layout';
 import Maps from '@/app/components/maps';
 import SlideGenerator from '@/app/components/slideGenerator';
 import SlideGeneratorSecond from '@/app/components/slideGeneratorSecond';
-import { trainers } from '@/app/data/constant';
+import { getAllTrainers, TRAINERS_REVALIDATE_SECONDS, type Trainer } from '@/lib/trainers';
+import type { GetStaticProps } from 'next';
 import { Divider } from '@nextui-org/divider';
 import { Button, Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Home() {
+type HomeProps = {
+  trainers: Trainer[];
+};
+
+export default function Home({ trainers }: HomeProps) {
   return (
     <>
       <Head>
@@ -242,3 +247,14 @@ export default function Home() {
     </>
   );
 }
+
+
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+  const trainers = await getAllTrainers();
+
+  return {
+    props: { trainers },
+    revalidate: TRAINERS_REVALIDATE_SECONDS,
+  };
+};
+

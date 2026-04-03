@@ -1,8 +1,9 @@
-import FadeInSection from "@/app/components/IntersectionObserver";
+﻿import FadeInSection from "@/app/components/IntersectionObserver";
 import Layout from "@/app/components/layout";
 import Maps from "@/app/components/maps";
 import SectionForm from "@/app/components/SectionForm";
-import { trainers } from "@/app/data/constant";
+import { getAllTrainers, TRAINERS_REVALIDATE_SECONDS, type Trainer } from '@/lib/trainers';
+import type { GetStaticProps } from 'next';
 import { BreadcrumbItem, Breadcrumbs, Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
 import Head from "next/head";
 import Image from "next/image";
@@ -11,7 +12,11 @@ import Link from "next/link";
 
 
 
-const TrainersPage = ({ }) => {
+type TrainersPageProps = {
+  trainers: Trainer[];
+};
+
+const TrainersPage = ({ trainers }: TrainersPageProps) => {
   return (
     <>
       <Head>
@@ -103,3 +108,13 @@ const TrainersPage = ({ }) => {
 };
 
 export default TrainersPage;
+
+export const getStaticProps: GetStaticProps<TrainersPageProps> = async () => {
+  const trainers = await getAllTrainers();
+
+  return {
+    props: { trainers },
+    revalidate: TRAINERS_REVALIDATE_SECONDS,
+  };
+};
+
