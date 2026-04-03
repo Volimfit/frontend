@@ -1,0 +1,9 @@
+yarn run v1.22.22
+$ next dev
+  ▲ Next.js 14.2.4
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+ ✓ Ready in 3s
+^Cerror Command failed with exit code 3221225786.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

@@ -1,4 +1,4 @@
-﻿import { Button, Divider } from '@nextui-org/react';
+﻿import { Button, Divider } from '@heroui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -47,6 +47,7 @@ export default function SlideGenerator({}: TrainerSlideProps) {
     </div>
   );
 }
+
 
 
 

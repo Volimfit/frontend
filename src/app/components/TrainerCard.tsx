@@ -1,9 +1,9 @@
-import {
+﻿import {
   BreadcrumbItem,
   Breadcrumbs,
   Card,
   Divider
-} from '@nextui-org/react';
+} from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -119,3 +119,4 @@ export default function TrainerCard({
     </div>
   );
 }
+

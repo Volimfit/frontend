@@ -10,8 +10,8 @@ import SlideGenerator from '@/app/components/slideGenerator';
 import SlideGeneratorSecond from '@/app/components/slideGeneratorSecond';
 import { getAllTrainers, TRAINERS_REVALIDATE_SECONDS, type Trainer } from '@/lib/trainers';
 import type { GetStaticProps } from 'next';
-import { Divider } from '@nextui-org/divider';
-import { Button, Card, CardBody, CardFooter, CardHeader } from '@nextui-org/react';
+import { Divider } from '@heroui/react';
+import { Button, Card, CardBody, CardFooter, CardHeader } from '@heroui/react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -257,4 +257,5 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     revalidate: TRAINERS_REVALIDATE_SECONDS,
   };
 };
+
 

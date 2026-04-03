@@ -1,7 +1,7 @@
-// app/components/ThemeSwitcher.tsx
+﻿// app/components/ThemeSwitcher.tsx
 'use client';
 
-import { Switch } from '@nextui-org/react';
+import { Switch } from '@heroui/react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { MoonIcon } from '../icons/MoonIcon';
@@ -32,3 +32,4 @@ export function ThemeSwitcher() {
     </div>
   );
 }
+

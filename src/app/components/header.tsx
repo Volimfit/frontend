@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import {
   Button,
   Image,
@@ -10,7 +10,7 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from '@nextui-org/react';
+} from '@heroui/react';
 import React from 'react';
 
 export default function Header() {
@@ -48,9 +48,11 @@ export default function Header() {
             src={'/logo_only.png'}
             alt='ff'
             width={100}
+            height={100}
+            style={{ height: 'auto' }}
             radius='none'
           />
-          <Image radius='none' src={'/logo_text.png'} alt='ff' width={150} />
+          <Image radius='none' src={'/logo_text.png'} alt='ff' width={150} height={34} style={{ height: 'auto' }} />
         </NavbarBrand>
       </NavbarContent>
 
@@ -63,8 +65,10 @@ export default function Header() {
             src={'/logo_only.png'}
             alt='ff'
             width={100}
+            height={100}
+            style={{ height: 'auto' }}
           />
-          <Image radius='none' src={'/logo_text.png'} alt='ff' width={150} />
+          <Image radius='none' src={'/logo_text.png'} alt='ff' width={150} height={34} style={{ height: 'auto' }} />
         </NavbarBrand>
         </Link>
         <NavbarItem>
@@ -119,3 +123,4 @@ export default function Header() {
     </Navbar>
   );
 }
+

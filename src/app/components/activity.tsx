@@ -1,4 +1,4 @@
-import { Card, CardBody, CardFooter, Image, Tab, Tabs } from '@nextui-org/react';
+﻿import { Card, CardBody, CardFooter, Image, Tab, Tabs } from '@heroui/react';
 
 export default function Activity() {
   const adultActivities = [
@@ -174,3 +174,4 @@ export default function Activity() {
     </Tabs>
   );
 }
+

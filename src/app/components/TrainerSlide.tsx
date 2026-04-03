@@ -1,10 +1,10 @@
-import {
+﻿import {
   Card,
   CardHeader,
   Chip,
   Divider,
   Image,
-} from '@nextui-org/react';
+} from '@heroui/react';
 import Link from 'next/link';
 
 interface TrainerSlideProps {
@@ -42,3 +42,4 @@ src={`${img}`}
   </Link>
   );
 }
+

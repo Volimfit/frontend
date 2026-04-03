@@ -1,5 +1,5 @@
-'use client';
-import { Divider } from '@nextui-org/react';
+﻿'use client';
+import { Divider } from '@heroui/react';
 import { Map, Placemark, YMaps } from '@pbe/react-yandex-maps';
 export default function Maps() {
   return (
@@ -46,3 +46,4 @@ export default function Maps() {
     </div>
   );
 }
+

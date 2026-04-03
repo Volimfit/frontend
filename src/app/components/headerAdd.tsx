@@ -1,5 +1,5 @@
-'use client';
-import { Navbar } from '@nextui-org/react';
+﻿'use client';
+import { Navbar } from '@heroui/react';
 export default function HeaderAdd() {
   return (
     <Navbar height={'2rem'} className='bg-[#1c6c76]'>
@@ -47,3 +47,4 @@ export default function HeaderAdd() {
     </Navbar>
   );
 }
+

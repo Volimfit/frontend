@@ -1,8 +1,10 @@
-import { Button, Checkbox, Input } from '@nextui-org/react';
+﻿import { Button, Checkbox, Input } from '@heroui/react';
 import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
 import Privacy from './privacy';
+
+const ReCAPTCHAComponent = ReCAPTCHA as unknown as React.ComponentType<any>;
 
 export default function MyForm() {
   const [first, setFirst] = useState('+7');
@@ -112,7 +114,7 @@ export default function MyForm() {
         Я согласен с правилами обработки персональных данных
       </Checkbox>
       <Privacy />
-      <ReCAPTCHA
+      <ReCAPTCHAComponent
         className=' pt-5 sm:pt-10  pb-5 sm:pb-10'
         sitekey={`${
           process.env.RECAPTCHA_SECRET_KEY || '6LeHuwwqAAAAAHvZD1LBGHyN9cogqSUoDTSsvfk8'
@@ -131,3 +133,4 @@ export default function MyForm() {
     </form>
   );
 }
+
