@@ -1,6 +1,6 @@
-import {
+﻿import {
   Divider
-} from '@nextui-org/react';
+} from '@heroui/react';
 import Image from 'next/image';
 
 
@@ -60,3 +60,4 @@ export default function SlideGeneratorSecond({
     </div>
   );
 }
+

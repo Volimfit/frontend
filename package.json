@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap"
+    "sync:pb:public-offer": "node scripts/sync-pocketbase-public-offer-files.mjs"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.4.2",
+    "@heroui/react": "2.8.10",
     "@pbe/react-yandex-maps": "^1.2.5",
     "embla-carousel": "^8.1.6",
     "embla-carousel-autoplay": "^8.1.6",

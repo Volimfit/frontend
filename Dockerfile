@@ -1,30 +1,33 @@
-# Use Node.js with Alpine base image
-FROM node:alpine
-
-# Set working directory
+FROM node:20-alpine AS base
 WORKDIR /usr/app
+ENV NEXT_TELEMETRY_DISABLED=1
 
-# Copy package.json and package-lock.json before other files
-COPY ./package*.json ./
+FROM base AS deps
+COPY package.json yarn.lock ./
+RUN corepack enable && yarn install --frozen-lockfile
 
-# Install dependencies and pm2
-RUN npm install
-RUN npm install --global pm2
+FROM base AS builder
+COPY --from=deps /usr/app/node_modules ./node_modules
+COPY . .
+RUN yarn build
 
-# Copy all files
-COPY ./ ./
+FROM node:20-alpine AS runner
+WORKDIR /usr/app
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME=0.0.0.0
+ENV NODE_OPTIONS=--max-old-space-size=384
 
-# Build the app
-RUN npm run build
+RUN addgroup -S nextjs && adduser -S nextjs -G nextjs
 
-# Ensure the `.next` cache directories exist and have correct permissions
-RUN mkdir -p /usr/app/.next/cache/images && chown -R node:node /usr/app/.next
+COPY --from=builder /usr/app/public ./public
+COPY --from=builder /usr/app/.next/standalone ./
+COPY --from=builder /usr/app/.next/static ./.next/static
 
-# Expose the listening port
+RUN mkdir -p /usr/app/.next/cache/images && chown -R nextjs:nextjs /usr/app
+
+USER nextjs
 EXPOSE 3000
 
-# Run container as non-root user
-USER node
-
-# Start the application
-CMD [ "pm2-runtime", "npm", "--", "start", "--max_old_space_size=512" ]
+CMD ["node", "server.js"]

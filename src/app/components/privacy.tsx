@@ -1,4 +1,4 @@
-import {
+﻿import {
   Button,
   Link,
   Modal,
@@ -7,14 +7,14 @@ import {
   ModalFooter,
   ModalHeader,
   useDisclosure,
-} from '@nextui-org/react';
+} from '@heroui/react';
 
 export default function Privacy() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
     <>
-      <Link color='success' onClick={onOpen}>
+      <Link color='success' onPress={onOpen}>
         Политика конфиденциальности
       </Link>
       <Modal
@@ -146,3 +146,4 @@ export default function Privacy() {
     </>
   );
 }
+

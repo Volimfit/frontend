@@ -9,14 +9,18 @@ services:
     environment:
       - NODE_ENV=production
       - RECAPTCHA_SECRET_KEY=${RECAPTCHA_SECRET_KEY}
+      - NODE_OPTIONS=--max-old-space-size=768
+    mem_limit: 1200m
+    mem_reservation: 768m
+    cpus: 0.80
     deploy:
       resources:
         limits:
-          memory: 1.5G
-          cpus: "0.8"
+          memory: 1200M
+          cpus: "0.80"
         reservations:
-          memory: 1G
-          cpus: "0.5"
+          memory: 768M
+          cpus: "0.40"
     volumes:
       - image_cache:/usr/app/.next/cache/images
 volumes:

@@ -1,24 +1,20 @@
-import { Button, Checkbox, Input } from '@nextui-org/react';
+﻿import { Button, Checkbox, Input } from '@heroui/react';
 import { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
 import Privacy from './privacy';
 
+const ReCAPTCHAComponent = ReCAPTCHA as unknown as React.ComponentType<any>;
+
 interface FormTrainerProps {
   name?: string;
-
-
 }
-export default function FormTrainer(
-  {
-    name,
-  }: FormTrainerProps
-) {
+export default function FormTrainer({ name }: FormTrainerProps) {
   const [first, setFirst] = useState('+7');
   const [finish, setFinished] = useState(false);
   const [isLoading, setLoading] = useState(false); // Состояние для отслеживания загрузки
   const [isInvalid, setIsInvalid] = useState(false); // Состояние для отслеживания ошибки
-  const [recaptchaValue, setRecaptchaValue] = useState(null); // Состояние для reCAPTCHA
+  const [recaptchaValue, setRecaptchaValue] = useState<string | null>(null); // Состояние для reCAPTCHA
   const {
     register,
     handleSubmit,
@@ -35,7 +31,7 @@ export default function FormTrainer(
 
     try {
       // Ваш код для отправки данных на сервер
-      
+
       // http://109.172.114.125:8111
       const url = 'https://api.volimfit.ru/mail/send-email-trainer';
       const body = {
@@ -43,26 +39,20 @@ export default function FormTrainer(
         name: name,
         recaptcha: recaptchaValue,
       };
-      console.log(JSON.stringify(body));
-      await fetch(url, {
+
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(body),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-          }
-          return response.json();
-        })
-        .then((data) => {
-          console.log('Success:', data);
-        })
-        .catch((error) => {
-          console.error('There was a problem with the fetch operation:', error);
-        });
+      });
+
+      if (!response.ok) {
+        throw new Error(`Network response was not ok: ${response.statusText}`);
+      }
+
+      await response.json();
       // Можно добавить имитацию задержки для тестирования
       await new Promise((resolve) => setTimeout(resolve, 2000));
 
@@ -124,11 +114,12 @@ export default function FormTrainer(
         Я согласен с правилами обработки персональных данных
       </Checkbox>
       <Privacy />
-      <ReCAPTCHA
+      <ReCAPTCHAComponent
         className=' pt-5 sm:pt-10  pb-5 sm:pb-10'
-        sitekey={`${process.env.RECAPTCHA_SECRET_KEY || '6LeHuwwqAAAAAHvZD1LBGHyN9cogqSUoDTSsvfk8'
-          }`} // Замените на ваш site key
-        onChange={(value: any) => setRecaptchaValue(value)}
+        sitekey={`${
+          process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || '6LeHuwwqAAAAAHvZD1LBGHyN9cogqSUoDTSsvfk8'
+        }`} // Замените на ваш site key
+        onChange={(value: string | null) => setRecaptchaValue(value)}
       />
 
       <Button
@@ -142,3 +133,4 @@ export default function FormTrainer(
     </form>
   );
 }
+

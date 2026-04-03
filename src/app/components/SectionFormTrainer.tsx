@@ -1,4 +1,4 @@
-import { Divider } from "@nextui-org/react";
+﻿import { Divider } from "@heroui/react";
 import FormTrainer from "./formTrainer";
 interface SectionFormTrainerProps {
   name: string;
