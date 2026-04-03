@@ -1,13 +1,38 @@
-﻿'use client';
+'use client';
 
-import { Divider,  } from '@heroui/react';
+import { useEffect, useState } from 'react';
+import { Divider } from '@heroui/react';
 import Image from 'next/image';
+import { getPublicOfferFiles, type PublicOfferFile } from '@/lib/publicOffer';
 
 export default function Footer() {
+  const [publicOfferFiles, setPublicOfferFiles] = useState<PublicOfferFile[]>([]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadPublicOfferFiles = async () => {
+      try {
+        const files = await getPublicOfferFiles();
+        if (isMounted) {
+          setPublicOfferFiles(files);
+        }
+      } catch {
+        if (isMounted) {
+          setPublicOfferFiles([]);
+        }
+      }
+    };
+
+    void loadPublicOfferFiles();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   return (
-    <footer
-      className=' text-center text-surface-75 dark:text-white-75 lg:text-left'
-      >
+    <footer className=' text-center text-surface-75 dark:text-white-75 lg:text-left'>
       <Divider />
       <div className='mx-6 py-5 text-center md:text-left'>
         <div className='grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4'>
@@ -16,16 +41,13 @@ export default function Footer() {
               <span className='me-3 [&>svg]:h-4 [&>svg]:w-4'>
                 <Image src={'/logo_only.png'} alt='ff' width={100} height={100} style={{ height: 'auto' }} />
               </span>
-              
               VOLIMFIT
             </h6>
             <span>Семейный фитнес-клуб, где каждый достигает целей!</span>
           </div>
 
           <div>
-            <h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
-              Время работы
-            </h6>
+            <h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>Время работы</h6>
 
             <p className='mb-4'>
               <a href='#about'>пн-пт с 7:00 до 23:00</a>
@@ -33,46 +55,43 @@ export default function Footer() {
             <p className='mb-4'>
               <a href='#section'>сб-вс c 9:00 до 22:00</a>
             </p>
-          
+
             <div className='mb-4 flex justify-center flex-col  md:justify-start'>
-            <h6 className='  flex justify-center  font-semibold uppercase md:justify-start'>
-            Публичная оферта
-              </h6>
-              <Divider className='mt-2 mb-2'/>
-              <a  target='_blank' href="./several-condition.pdf">Общие условия</a>
-              <a  target='_blank' href="./several-condition-1.pdf">Заявление</a>
-              <a  target='_blank' href="./several-condition-2.pdf">Прейскурант</a>
-              <a  target='_blank' href="./several-condition-3.pdf">Правила клуба</a>
+              <h6 className='  flex justify-center  font-semibold uppercase md:justify-start'>Публичная оферта</h6>
+              <Divider className='mt-2 mb-2' />
+              {publicOfferFiles.map((item) => (
+                <a key={item.id} target='_blank' rel='noreferrer' href={item.url}>
+                  {item.titleRu}
+                </a>
+              ))}
+              {!publicOfferFiles.length && <span>Документы временно недоступны</span>}
             </div>
-            
           </div>
 
           <div className='flex flex-col justify-center items-center sm:items-start  sm:justify-start'>
-            <h6 className='mb-4  flex justify-center font-semibold uppercase md:justify-start'>
-              Социальные сети
-            </h6>
+            <h6 className='mb-4  flex justify-center font-semibold uppercase md:justify-start'>Социальные сети</h6>
             <div className='w-32 '>
               <div className='mb-4 flex items-center justify-start sm:items-start sm:justify-start'>
-                <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank'>
+                <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank' rel='noreferrer'>
                   <Image src={'/social/telegram.png'} alt='ff' width={30} height={30} unoptimized />{' '}
                 </a>
-                <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank' className='ml-2'>
+                <a href='https://t.me/VOLIMFIT_FITNESS' target='_blank' rel='noreferrer' className='ml-2'>
                   Telegram
                 </a>
               </div>
               <div className='mb-4 flex items-center justify-start sm:items-start sm:justify-start'>
-                <a href='https://taplink.cc/volimfit' target='_blank'>
+                <a href='https://taplink.cc/volimfit' target='_blank' rel='noreferrer'>
                   <Image src={'/social/taplink.png'} alt='ff' width={30} height={30} unoptimized />
                 </a>
-                <a href='https://taplink.cc/volimfit' target='_blank' className='ml-2'>
+                <a href='https://taplink.cc/volimfit' target='_blank' rel='noreferrer' className='ml-2'>
                   Taplink
                 </a>
               </div>
               <div className='mb-4 flex items-center justify-start  sm:items-start  sm:justify-start'>
-                <a href='https://wa.me/+79197742220' target='_blank'>
+                <a href='https://wa.me/+79197742220' target='_blank' rel='noreferrer'>
                   <Image src={'/social/whatsapp.png'} alt='ff' width={30} height={30} unoptimized />
                 </a>
-                <a href='https://wa.me/+79197742220' target='_blank' className='ml-2'>
+                <a href='https://wa.me/+79197742220' target='_blank' rel='noreferrer' className='ml-2'>
                   WhatsApp
                 </a>
               </div>
@@ -80,9 +99,7 @@ export default function Footer() {
           </div>
 
           <div id='contact'>
-            <h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>
-              Контакты
-            </h6>
+            <h6 className='mb-4 flex justify-center font-semibold uppercase md:justify-start'>Контакты</h6>
 
             <p className='mb-4 flex items-center justify-center md:justify-start'>
               <span className='me-3 [&>svg]:h-5 [&>svg]:w-5'>
@@ -143,4 +160,3 @@ export default function Footer() {
     </footer>
   );
 }
-

@@ -16,6 +16,7 @@
 interface PocketBaseTrainerRecord {
   id: string;
   collectionId: string;
+  updated?: string;
   slug: string;
   site_id: string;
   name: string;
@@ -60,7 +61,8 @@ function buildTrainerImageUrl(record: PocketBaseTrainerRecord): string {
   const fileName = toFileName(record.photo);
 
   if (fileName) {
-    return `${PB_URL}/api/files/${record.collectionId}/${record.id}/${fileName}`;
+    const version = record.updated ? `?v=${encodeURIComponent(record.updated)}` : '';
+    return `${PB_URL}/api/files/${record.collectionId}/${record.id}/${fileName}${version}`;
   }
 
   if (record.image_url) {

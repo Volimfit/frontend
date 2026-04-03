@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sync:pb:public-offer": "node scripts/sync-pocketbase-public-offer-files.mjs"
   },
   "dependencies": {
     "@heroui/react": "2.8.10",
